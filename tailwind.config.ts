@@ -11,6 +11,9 @@ const config: Config = {
       backgroundColor: {
         primary: "#FBF8EF",
       },
+      fontFamily: {
+        tiempos: ["Tiempos Headline", "serif"],
+      },
     },
   },
   plugins: [],
