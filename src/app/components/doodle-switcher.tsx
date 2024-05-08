@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const doodles = [
   {
@@ -18,14 +18,19 @@ const doodles = [
     src: "images/doodles/doodle4.png",
     title: '"MS Paint", by HudZah',
   },
-  {
-    src: "images/doodles/doodle5.png",
-    title: '"Socratica Block Letters"',
-  }
+//   {
+//     src: "images/doodles/doodle5.png",
+//     title: '"Socratica Block Letters"',
+//   }
 ];
 
 export default function DoodleSwitcher() {
-  const [currentIndex, setCurrentIndex] = useState(Math.floor(Math.random() * doodles.length));
+  
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentIndex(Math.floor(Math.random() * doodles.length));
+  }, []);
 
   const switchDoodle = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % doodles.length);
@@ -50,7 +55,6 @@ export default function DoodleSwitcher() {
         }`}
       />
 
-      {/* Right-aligned text information */}
       <div className="w-full flex flex-col items-end mt-8 mr-16">
         <p className="font-mono text-[8px] md:text-sm text-[#706F6B]">
           CURRENT ART

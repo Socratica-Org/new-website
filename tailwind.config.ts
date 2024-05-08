@@ -13,6 +13,7 @@ const config: Config = {
       },
       fontFamily: {
         tiempos: ["Tiempos Headline", "serif"],
+        untitled: ["Untitled Sans", "sans-serif"],
       },
     },
   },

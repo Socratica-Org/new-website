@@ -2,7 +2,7 @@ import NavBar from "./navbar";
 
 export default function TopBar() {
   return (
-    <div className="w-full flex justify-between items-center mt-5 px-5 relative">
+    <div className="w-full flex justify-between items-center mt-5 px-10 relative">
 
       <div className="flex space-x-4">
         <img src="/images/logo.svg" alt="Socratica" className="w-8 h-8" />
