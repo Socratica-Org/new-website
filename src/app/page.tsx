@@ -1,12 +1,12 @@
 import React from "react";
-import TopBar from "./components/topbar";
+import Topbar from "./components/topbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 
 export default function Home() {
 
   return (
     <div className="bg-primary min-h-screen min-w-full flex flex-col">
-      <TopBar />
+      <Topbar />
       <div className="container mx-auto max-w-screen-xl px-6 -mt-8">
         <DoodleSwitcher />
       </div>
