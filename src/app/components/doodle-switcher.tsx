@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const doodles = [
   {
@@ -10,22 +10,21 @@ const doodles = [
     src: "images/doodles/doodle2.png",
     title: '"Project Block"',
   },
-//   {
-//     src: "images/doodles/doodle3.png",
-//     title: `"Aileen's Worst Nightmare", by Jake Rudolph`,
-//   },
+  //   {
+  //     src: "images/doodles/doodle3.png",
+  //     title: `"Aileen's Worst Nightmare", by Jake Rudolph`,
+  //   },
   {
     src: "images/doodles/doodle4.png",
     title: '"MS Paint", by HudZah',
   },
-//   {
-//     src: "images/doodles/doodle5.png",
-//     title: '"Socratica Block Letters"',
-//   }
+  //   {
+  //     src: "images/doodles/doodle5.png",
+  //     title: '"Socratica Block Letters"',
+  //   }
 ];
 
 export default function DoodleSwitcher() {
-  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -51,7 +50,9 @@ export default function DoodleSwitcher() {
         src={currentDoodle.src}
         alt={currentDoodle.title}
         className={`h-[200px] w-auto object-contain ${
-          currentDoodle.title === `"Aileen's Worst Nightmare", by Jake Rudolph` ? 'md:h-[450px] md:-mt-14' : ''
+          currentDoodle.title === `"Aileen's Worst Nightmare", by Jake Rudolph`
+            ? "md:h-[450px] md:-mt-14"
+            : ""
         }`}
       />
 
