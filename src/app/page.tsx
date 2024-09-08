@@ -26,17 +26,19 @@ export default function Home() {
         </div>
         <div className="w-[15%]" />
         <div className="w-1/4">
-          <p className="text-lg">We are multidisciplinary in our crafts, and a safe space for our shared love of making things*.</p>
-          <p className="mt-10 text-lg text-soft-grey">*whatever your thing may be.</p>
+          <p className="text-lg">
+            We are multidisciplinary in our crafts, and a safe space for our
+            shared love of making things*.
+          </p>
+          <p className="mt-10 text-lg text-soft-grey">
+            *whatever your thing may be.
+          </p>
         </div>
       </div>
 
       <div className="mt-8">
         <a className="bg-black text-white rounded-full flex items-center px-6 py-3 uppercase font-dm-mono">
-          <img
-            src="/images/right-arrow.svg"
-            className="mr-2"
-          />
+          <img src="/images/right-arrow.svg" className="mr-2" />
           Join a Session
         </a>
       </div>

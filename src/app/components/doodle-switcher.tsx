@@ -10,10 +10,10 @@ const doodles = [
     src: "images/doodles/doodle2.png",
     title: '"Project Block"',
   },
-    // {
-    //   src: "images/doodles/doodle3.png",
-    //   title: `"Aileen's Worst Nightmare", by Jake Rudolph`,
-    // },
+  // {
+  //   src: "images/doodles/doodle3.png",
+  //   title: `"Aileen's Worst Nightmare", by Jake Rudolph`,
+  // },
   {
     src: "images/doodles/doodle4.png",
     title: '"MS Paint", by HudZah',
@@ -21,7 +21,7 @@ const doodles = [
   {
     src: "images/doodles/socratica-big.svg",
     title: "Big Socratica Doodle",
-  }
+  },
   //   {
   //     src: "images/doodles/doodle5.png",
   //     title: '"Socratica Block Letters"',
