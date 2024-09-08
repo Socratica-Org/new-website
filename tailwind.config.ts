@@ -9,11 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: "#FBF8EF",
+        "primary": "#FBF8EF",
+      },
+      colors: {
+        "soft-grey": "#A09D98",
       },
       fontFamily: {
         tiempos: ["Tiempos Headline", "serif"],
         untitled: ["Untitled Sans", "sans-serif"],
+        "dm-mono": ["DM Mono", "monospace"]
       },
     },
   },
