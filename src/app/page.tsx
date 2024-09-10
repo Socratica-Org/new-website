@@ -48,7 +48,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-8">
+      <div className="mt-8 flex">
         <a className="bg-black text-white rounded-full flex items-center px-6 py-3 uppercase font-dm-mono">
           <img src="/images/right-arrow.svg" className="mr-2" />
           Join a Session

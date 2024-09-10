@@ -10,6 +10,10 @@ const config: Config = {
     extend: {
       backgroundColor: {
         primary: "#FBF8EF",
+        orange: "#FF6D24",
+        "light-blue": "#BCD1F1",
+        pink: "#F4B1CB",
+        yellow: "#E9B34A",
       },
       colors: {
         "soft-grey": "#A09D98",
