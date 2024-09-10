@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import MobileNavbar from "./mobile-navbar";
 
 export default function TopBar() {
@@ -25,12 +25,12 @@ export default function TopBar() {
           TOOLBOX
         </a>
         <a className="font-dm-mono border border-black border-b-2 rounded-full px-4 py-2 flex items-center">
-          <img src='images/black-right-arrow.svg' className="mr-2"/>
+          <img src="images/black-right-arrow.svg" className="mr-2" />
           <span>DONATE</span>
         </a>
         <a className="font-dm-mono bg-black border border-black border-b-2 rounded-full px-4 py-2 flex items-center">
-          <img src='images/right-arrow.svg' className="mr-2"/>
-          <span className='text-white'>JOIN</span>
+          <img src="images/right-arrow.svg" className="mr-2" />
+          <span className="text-white">JOIN</span>
         </a>
       </div>
 

@@ -24,7 +24,7 @@ const config: Config = {
         "dm-mono": ["DM Mono", "monospace"],
       },
       fontSize: {
-        'vw-100': '100vw', // Adjust this based on your needs
+        "vw-100": "100vw", // Adjust this based on your needs
       },
     },
   },
