@@ -6,10 +6,10 @@ import LatticeCard from "./components/lattice-card";
 export default function Home() {
 
   const latticeNodes = [
-    {nodeName:'Socratica', nodeCity: 'waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
-    {nodeName:'Socratica', nodeCity: 'waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
-    {nodeName:'Socratica', nodeCity: 'waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
-    {nodeName:'Socratica', nodeCity: 'waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
+    {nodeName:'Socratica', nodeCity: 'Waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
+    {nodeName:'Atelier', nodeCity: 'Vancouver', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
+    {nodeName:'Soto', nodeCity: 'Toronto', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
+    {nodeName:'Sundays', nodeCity: 'Los Angeles', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
     {nodeName:'Socratica', nodeCity: 'waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
     {nodeName:'Socratica', nodeCity: 'waterloo', nodeCountry: 'CAN', imageURL: 'https://zkp2p.xyz/logo512.png' },
 ]
@@ -103,7 +103,7 @@ export default function Home() {
               </svg>
               <p className="mt-[15px]">LATTICE</p>
             </div>
-            <h1 className="font-tiempos text-6xl text-center leading-[1]">
+            <h1 className="font-tiempos text-6xl text-center leading-[1] tracking-[-2.5px]">
               Independently-run nodes around the <span><br></br></span> <span className="italic">world</span> that run sessions of their own.
             </h1>
           </div>
@@ -122,7 +122,7 @@ export default function Home() {
 
           <div className="relative mb-[50px]">
             {/* Outer wrapper for horizontal scrolling */}
-            <div className="flex overflow-x-auto space-x-4 py-4 hide-scroll-bar">
+            <div className="flex overflow-x-auto space-x-9 py-4 hide-scroll-bar">
               {/* Map through your card data */}
               <div className="min-w-[200px] h-[100%]"></div>
               {latticeNodes.map((node, index) => (
