@@ -8,3 +8,15 @@
   font-weight: normal;
   src: url("/fonts/DMMono-Regular.ttf") format("truetype");
 }
+
+
+
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, and Opera */
+}
