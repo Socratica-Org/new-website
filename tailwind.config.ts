@@ -19,6 +19,9 @@ const config: Config = {
         untitled: ["Untitled Sans", "sans-serif"],
         "dm-mono": ["DM Mono", "monospace"],
       },
+      fontSize: {
+        'vw-100': '100vw', // Adjust this based on your needs
+      },
     },
   },
   plugins: [],
