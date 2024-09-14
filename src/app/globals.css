@@ -9,6 +9,29 @@
   src: url("/fonts/DMMono-Regular.ttf") format("truetype");
 }
 
+/* @font-face {
+  font-family: "Tiempos Headline";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/Tiempos Headline/tiempos-headline-regular.woff2") format("woff2");
+} */
+
+@font-face {
+  font-family: "Tiempos Headline Light";
+  font-style: light;
+  font-weight: light;
+  src: url("/fonts/Tiempos Headline/tiempos-headline-light.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/InterVariable.woff2")
+    format("woff2");
+}
+
 .hide-scroll-bar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

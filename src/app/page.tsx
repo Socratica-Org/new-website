@@ -67,21 +67,68 @@ export default function Home() {
         </div>
         <div className="w-[15%]" />
         <div className="w-1/4">
-          <p className="text-lg">
+          <p className="text-lg font-inter-variable tracking-tight leading-none">
             We are multidisciplinary in our crafts, and a safe space for our
             shared love of making things*.
           </p>
           <p className="mt-10 text-lg text-soft-grey">
-            *whatever your thing may be.
+            <i>*whatever your thing may be.</i>
           </p>
         </div>
       </div>
 
       <div className="mt-8 flex">
         <a className="bg-black text-white rounded-full flex items-center px-6 py-3 uppercase font-dm-mono">
-          <img src="/images/right-arrow.svg" className="mr-2" />
+          <Image
+            src="/images/right-arrow.svg"
+            alt="Right Arrow"
+            width={12}
+            height={12}
+            className="mr-2"
+          />
           Join a Session
         </a>
+      </div>
+
+      <div className="mt-16 flex flex-row">
+        <div className="w-1/2">
+          <Image
+            src="/images/symposium-w24.svg"
+            alt="Symposium Winter 2024"
+            width={670}
+            height={670}
+          />
+        </div>
+        <div className="w-1/2 flex flex-col">
+          <div className="flex flex-row pl-4 space-x-4">
+            <div className="w-1/2">
+              <Image
+                src="/images/socratica-s24.svg"
+                alt="Socratica Summer 2024"
+                width={325}
+                height={478}
+              />
+            </div>
+            <div className="w-1/2">
+              <Image
+                src="/images/kickoff-f23.svg"
+                alt="Kickoff Fall 2023"
+                width={325}
+                height={478}
+              />
+            </div>
+          </div>
+          <div className="mt-12 px-4 text-2xl pr-8">
+            <p className="font-inter-variable tracking-tight leading-none">
+              Great creative work is historically done together, across
+              backgrounds and disciplines, in small, high trust groups.
+            </p>
+            <p className="mt-10 font-inter-variable tracking-tight leading-none">
+              This is the foundation of boundary pushing work - in engineering, science,
+              art, and more.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="relative pb-28">
@@ -122,7 +169,7 @@ export default function Home() {
       </div>
 
       {/* START: LANDING PAGE LATTICE SECTION */}
-      <div className="h-[fit] bg-[url('../../public/Left-Side-Lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]">
+      <div className="h-[fit] bg-[url('../../public/images/left-side-lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]">
         <p className="text-[#A09D98] mt-[10px] font-dm-mono">
           HERE, THERE, EVERYWHERE
         </p>

@@ -20,11 +20,16 @@ const config: Config = {
       },
       fontFamily: {
         tiempos: ["Tiempos Headline", "serif"],
+        "tiempos-light": ["Tiempos Headline Light", "serif"],
         untitled: ["Untitled Sans", "sans-serif"],
         "dm-mono": ["DM Mono", "monospace"],
+        "inter-variable": ["Inter Variable", "sans-serif"],
       },
       fontSize: {
-        "vw-100": "100vw", // Adjust this based on your needs
+        "vw-100": "100vw",
+      },
+      lineHeight: {
+        "leading-tight": "1.25",
       },
     },
   },

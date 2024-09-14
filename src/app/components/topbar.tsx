@@ -16,7 +16,7 @@ export default function TopBar() {
         </a>
       </div>
 
-      <h2 className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-tiempos">
+      <h2 className="absolute left-1/2 transform -translate-x-1/2 text-2xl font-tiempos-light">
         For the love of <i>making.</i>
       </h2>
 
