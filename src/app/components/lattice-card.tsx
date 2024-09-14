@@ -16,7 +16,7 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
 }) => {
   return (
     <div
-      className="relative h-[320px] w-[230px] border border-gray-300 shadow-lg rounded-lg overflow-hidden cursor-pointer"
+      className="relative h-[320px] w-[230px] rounded-lg overflow-hidden cursor-pointer"
       style={{
         backgroundImage: `radial-gradient(49.09% 75.09% at 98.95% 54.34%, rgba(251, 248, 239, 0.00) 0%, rgba(251, 248, 239, 0.72) 36.5%, rgba(0, 0, 0, 0.46) 100%), url(${imageURL})`,
         backgroundSize: "cover",

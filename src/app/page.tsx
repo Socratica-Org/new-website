@@ -17,7 +17,7 @@ export default function Home() {
         const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         const visiblePercentage = (visibleHeight / viewportHeight) * 100;
         
-        setIsDarkMode(visiblePercentage >= 50);
+        setIsDarkMode(visiblePercentage >= 75);
       }
     };
 
@@ -65,7 +65,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-primary min-h-screen min-w-full flex flex-col px-10">
+    <div className={`${isDarkMode ? 'bg-off-black' : 'bg-primary'} min-h-screen min-w-full flex flex-col px-10`}>
       <Topbar />
       <div className="flex flex-col justify-center mt-8">
         <DoodleSwitcher />
@@ -227,21 +227,21 @@ export default function Home() {
       </div>
 
       {/* START: LANDING PAGE LATTICE SECTION */}
-      <div className="h-[fit] bg-[url('../../public/images/left-side-lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]">
+      <div id="lattice-section" className="h-[fit] bg-[url('../../public/images/left-side-lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]">
         <p className="text-[#A09D98] mt-[10px] font-dm-mono">
           HERE, THERE, EVERYWHERE
         </p>
         <div>
           <div className="font-dm-mono text-lg text-center leading-[1] pb-[30px] mx-auto mt-[90px] flex flex-col items-center">
             <Image
-              src="/images/logo.svg"
+              src={isDarkMode ? "/images/white-logo.svg" : "/images/logo.svg"}
               alt="Asterism"
               width={44}
               height={42}
             />
-            <p className="mt-[15px]">LATTICE</p>
+            <p className={`mt-[15px] ${isDarkMode ? 'text-white' : ''}`}>LATTICE</p>
           </div>
-          <h1 className="font-tiempos text-6xl text-center leading-[1] tracking-[-2.5px]">
+          <h1 className={`font-tiempos text-6xl text-center leading-[1] tracking-[-2.5px] ${isDarkMode ? 'text-white' : ''}`}>
             Independently-run nodes around the{" "}
             <span>
               <br></br>
@@ -251,7 +251,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex flex-row mx-auto justify-center gap-[10%] py-[50px]">
-          <p>
+          <p className={`${isDarkMode ? 'text-white' : ''}`}>
             <span className="text-[#A09D98]">
               We’re based in Waterloo, but{" "}
             </span>
@@ -268,10 +268,10 @@ export default function Home() {
             </span>
             Socratica Lattice.
           </p>
-          <button className="font-dm-mono flex flex-row self-center gap-[8px] uppercase border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px]">
-            <Image src="/images/globe.svg" alt="Globe" width={24} height={24} />
+          <a className={`font-dm-mono flex flex-row self-center gap-[8px] uppercase border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px] ${isDarkMode ? 'text-white' : ''}`}>
+            <Image src={isDarkMode ? "/images/white-globe.svg" : "/images/globe.svg"} alt="Globe" width={24} height={24} />
             Visit the lattice
-          </button>
+          </a>
         </div>
 
         <div className="relative pb-[80px]">
