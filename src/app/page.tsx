@@ -124,22 +124,40 @@ export default function Home() {
               backgrounds and disciplines, in small, high trust groups.
             </p>
             <p className="mt-10 font-inter-variable tracking-tight leading-none">
-              This is the foundation of boundary pushing work - in engineering, science,
-              art, and more.
+              This is the foundation of boundary pushing work - in engineering,
+              science, art, and more.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="relative pb-28">
-        {/* <div className="mt-24 pl-10 max-w-[25vw]">
-          <p className="font-untitled font-light text-xl leading-snug">
-            Socratica is an open collective of makers, artists, founders,
-            researchers, designers, and everything in-between.
-          </p>
-        </div> */}
+      <div className="my-52 mb-96 flex flex-col justify-center items-center relative">
 
-        {/* <img
+        {/* Mascots */}
+        <Image src="/images/mascots/light-blue.svg" alt="Light blue mascot" width={273} height={175} className="absolute top-[-45%] left-[7%]" />
+        <Image src="/images/mascots/green.svg" alt="Green mascot" width={171} height={140} className="absolute top-[-45%] left-[31.5%]" />
+        <Image src="/images/mascots/blue.svg" alt="Blue mascot" width={191} height={150} className="absolute top-[-45%] left-[56%]" />
+        <Image src="/images/mascots/orange.svg" alt="Orange mascot" width={191} height={150} className="absolute top-[-45%] left-[78%]" />
+        <Image src="/images/mascots/beige.svg" alt="Beige mascot" width={109} height={136} className="absolute top-[62%] left-[7%]" />
+        <Image src="/images/mascots/yellow.svg" alt="Yellow mascot" width={184} height={179} className="absolute top-[110%] left-[18%]" />
+        <Image src="/images/mascots/purple.svg" alt="Purple mascot" width={167} height={140} className="absolute top-[140%] left-[43%]" />
+        <Image src="/images/mascots/grey.svg" alt="Gray mascot" width={97} height={98} className="absolute top-[140%] left-[67%]" />
+        <Image src="/images/mascots/pink.svg" alt="Pink mascot" width={129} height={123} className="absolute top-[57%] left-[86%]" />
+
+
+        <Image src="images/logo.svg" alt="Asterism" width={42} height={42} />
+
+        <div className="mt-20 w-3/5 text-center">
+          <p className="font-tiempos text-5xl">
+            We host co-working sessions for you to get started on that{" "}
+            <i>thing</i>{" "}you've been meaning to do.
+          </p>
+        </div>
+      </div>
+
+      {/* <div className="relative pb-28">
+
+        <img
           src="images/mascots/orange.svg"
           alt="Orange Mascot"
           className="absolute top-0 right-[10%]"
@@ -158,15 +176,15 @@ export default function Home() {
           src="images/mascots/blue.svg"
           alt="Blue Mascot"
           className="absolute top-[75%] right-[72%]"
-        /> */}
-      </div>
+        />
+      </div> */}
 
-      <div className="mt-32 mx-auto max-w-[75%]">
-        {/* <p className="font-tiempos text-6xl text-center leading-[1]">
+      {/* <div className="mt-32 mx-auto max-w-[75%]">
+        <p className="font-tiempos text-6xl text-center leading-[1]">
           We host weekly coworking sessions for you to get started on that thing
           you’ve been putting off.
-        </p> */}
-      </div>
+        </p>
+      </div> */}
 
       {/* START: LANDING PAGE LATTICE SECTION */}
       <div className="h-[fit] bg-[url('../../public/images/left-side-lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]">
