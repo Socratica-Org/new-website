@@ -7,7 +7,7 @@ export default function AboutPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <div className={`${isDarkMode ? 'bg-off-black' : 'bg-primary'} min-h-screen min-w-full flex flex-col px-10`}>
-      <Topbar />
+      <Topbar isDarkMode={isDarkMode} />
 
       {/* QUOTES BLOCKS - should probably turn the blocks into a component*/}
       <div className="grid grid-cols-4 min-w-full mt-[70px] mb-[100px]">
