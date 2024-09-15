@@ -5,7 +5,6 @@ import Topbar from "../components/topbar";
 
 export default function AboutPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <div className={`${isDarkMode ? 'bg-off-black' : 'bg-primary'} min-h-screen min-w-full flex flex-col px-10`}>
       <Topbar isDarkMode={isDarkMode} />
