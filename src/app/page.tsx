@@ -24,7 +24,7 @@ export default function Home() {
       }
 
       if (logoRef.current && triggerRef.current) {
-        const triggerRect = triggerRef.current.getBoundingClientRect();
+        const triggerRect = (triggerRef.current as HTMLElement).getBoundingClientRect();
         setIsLogoFixed(triggerRect.top <= 0);
       }
     };
@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <div className={`${isDarkMode ? 'bg-off-black' : 'bg-primary'} min-h-screen min-w-full flex flex-col px-10`}>
-      <Topbar />
+      <Topbar isDarkMode={isDarkMode} />
       <div className="flex flex-col justify-center mt-8">
         <DoodleSwitcher />
         <video
