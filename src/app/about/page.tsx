@@ -227,6 +227,120 @@ export default function AboutPage() {
 
 
 
+      {/* PICS! */}
+      <div className="relative w-full my-[50px]">
+        <div className="relative grid grid-cols-4 gap-4 h-fit w-full">
+          {/* First Row */}
+          <div className="relative col-span-2 h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/group-photo.png"
+              alt="group photo"
+              layout="fill"
+            />
+          </div>
+          <div className="relative h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/session.png"
+              alt="session photo"
+              layout="fill"
+            />
+          </div>
+          <div className="relative h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/socratica-screen.png"
+              alt="socratica screen from kickoff photo"
+              layout="fill"
+            />
+          </div>
+
+          {/* Second Row */}
+          <div className="relative col-span-2 h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/chantelle.png"
+              alt="demoer chantelle with a guitar on stage signing her song at symposium photo"
+              layout="fill"
+            />
+          </div>
+          <div className="relative col-span-2 h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/brian-robot.png"
+              alt="brian demoing his self balancing robot at symposim booth photo"
+              layout="fill"
+            />
+          </div>
+
+          {/* Third Row */}
+          <div className="relative h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/gang-on-stage.png"
+              alt="demoer hudzah presenting his vertical farm on stage at symposium photo"
+              layout="fill"
+            />
+          </div>
+          <div className="relative h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/inayah.png"
+              alt="symposium hosts hudzah and inyah on stage photo"
+              layout="fill"
+            />
+          </div>
+          <div className="relative col-span-2 h-[300px]">
+            <Image
+              className="rounded-[20px] object-cover"
+              src="/images/wall-of-love/kickoff-gang.png"
+              alt="group photo at the fall 2023 kickoff on a roof top"
+              layout="fill"
+            />
+          </div>
+
+
+        {/* Polaroid Images Overlay */}
+          <div className="absolute  top-[40%] left-[10%] rotate-[-10deg] z-20">
+            <Image
+              className="w-[300px] drop-shadow-lg"
+              src="/images/wall-of-love/polaroid1.png"
+              alt="polaroid 1"
+              width={150}
+              height={150}
+            />
+          </div>
+          <div className="absolute top-[50%] left-[45%] rotate-[2deg] z-20">
+            <Image
+              className="w-[300px] drop-shadow-lg"
+              src="/images/wall-of-love/polaroid2.png"
+              alt="polaroid 2"
+              width={150}
+              height={150}
+            />
+          </div>
+          <div className="absolute top-[10%] left-[70%] rotate-[-5deg] z-20">
+            <Image
+              className="w-[300px] drop-shadow-lg"
+              src="/images/wall-of-love/polaroid3.png"
+              alt="polaroid 3"
+              width={150}
+              height={150}
+            />
+          </div>
+          <div className="absolute top-[75%] left-[90%] rotate-[-5deg] z-20">
+            <Image
+              className="w-[300px] drop-shadow-lg"
+              src="/images/wall-of-love/hand.png"
+              alt="hand holding phone taking a video of a demo"
+              width={150}
+              height={150}
+            />
+          </div>
+        </div>
+      </div>
+      {/* END OF : PICS! */}
     </div>
   );
 }
