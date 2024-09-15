@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Topbar from "./components/topbar";
 import DoodleSwitcher from "./components/doodle-switcher";
@@ -7,6 +7,9 @@ import LatticeCard from "./components/lattice-card";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isLogoFixed, setIsLogoFixed] = useState(false);
+  const logoRef = useRef(null);
+  const triggerRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,13 +20,19 @@ export default function Home() {
         const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         const visiblePercentage = (visibleHeight / viewportHeight) * 100;
         
-        setIsDarkMode(visiblePercentage >= 75);
+        setIsDarkMode(visiblePercentage >= 50);
+      }
+
+      if (logoRef.current && triggerRef.current) {
+        const triggerRect = triggerRef.current.getBoundingClientRect();
+        setIsLogoFixed(triggerRect.top <= 0);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   const latticeNodes = [
     {
@@ -188,21 +197,21 @@ export default function Home() {
           className="absolute top-[62%] left-[7%]"
         />
         <Image
-          src="/images/mascots/yellow.svg"
+          src={isDarkMode ? "/images/mascots/yellow-darkmode.svg" : "/images/mascots/yellow.svg"}
           alt="Yellow mascot"
           width={184}
           height={179}
           className="absolute top-[110%] left-[18%]"
         />
         <Image
-          src="/images/mascots/purple.svg"
+          src={isDarkMode ? "/images/mascots/purple-darkmode.svg" : "/images/mascots/purple.svg"}
           alt="Purple mascot"
           width={167}
           height={140}
           className="absolute top-[140%] left-[43%]"
         />
         <Image
-          src="/images/mascots/grey.svg"
+          src={isDarkMode ? "/images/mascots/grey-darkmode.svg" : "/images/mascots/grey.svg"}
           alt="Gray mascot"
           width={97}
           height={98}
@@ -216,7 +225,17 @@ export default function Home() {
           className="absolute top-[57%] left-[86%]"
         />
 
-        <Image src="images/logo.svg" alt="Asterism" width={42} height={42} />
+        <div ref={triggerRef}>
+          <Image 
+            ref={logoRef}
+            src={isDarkMode ? "/images/white-logo.svg" : "/images/logo.svg"} 
+            alt="Asterism" 
+            width={42} 
+            height={42}
+            className={`transition-all duration-300 ${isLogoFixed ? 'fixed top-12 left-1/2 transform -translate-x-1/2 z-50' : ''}`}
+          />
+        </div>
+
 
         <div className="mt-20 w-3/5 text-center">
           <p className="font-tiempos text-5xl">
@@ -251,7 +270,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="flex flex-row mx-auto justify-center gap-[10%] py-[50px]">
-          <p className={`${isDarkMode ? 'text-white' : ''}`}>
+          <p className={`${isDarkMode ? 'text-white' : ''} font-inter-variable leading-tight`}>
             <span className="text-[#A09D98]">
               We’re based in Waterloo, but{" "}
             </span>
