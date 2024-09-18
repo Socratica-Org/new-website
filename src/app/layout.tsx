@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
+import { headers } from 'next/headers';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,12 +17,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = headers();
+  const pathname = headersList.get('x-invoke-path') || '';
+  const showFooter = pathname !== '/map';
+
   return (
     <html lang="en">
       <body className={inter.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {children}
-        <Footer />
+        {showFooter && <Footer />}
       </body>
     </html>
   );

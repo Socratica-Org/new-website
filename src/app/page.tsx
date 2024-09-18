@@ -75,7 +75,7 @@ export default function Home() {
 
   return (
     <div className={`${isDarkMode ? 'bg-off-black' : 'bg-primary'} min-h-screen min-w-full flex flex-col px-10`}>
-      <Topbar isDarkMode={isDarkMode} />
+      <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />
       <div className="flex flex-col justify-center mt-8">
         <DoodleSwitcher />
         <video
