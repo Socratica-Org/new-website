@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import Globe from '../../../public/images/Globe.svg';
-import InstagramLogo from '../../../public/images/instagram-logo.svg';
-import TwitterLogo from '../../../public/images/twitter-logo.svg';
-import YoutubeLogo from '../../../public/images/youtube-logo.svg';
-import ArrowUpRight from '../../../public/images/right-arrow.svg';
-import CircleWavyCheck from '../../../public/images/CircleWavyCheck.svg';
+import React from "react";
+import Image from "next/image";
+import Globe from "../../../public/images/Globe.svg";
+import InstagramLogo from "../../../public/images/instagram-logo.svg";
+import TwitterLogo from "../../../public/images/twitter-logo.svg";
+import YoutubeLogo from "../../../public/images/youtube-logo.svg";
+import ArrowUpRight from "../../../public/images/right-arrow.svg";
+import CircleWavyCheck from "../../../public/images/CircleWavyCheck.svg";
 
 interface NodeProps {
   id: string;
@@ -21,7 +21,7 @@ interface NodeProps {
   imageSrc?: string;
 }
 
-export default function Node ({
+export default function Node({
   id,
   name,
   date,
@@ -46,15 +46,41 @@ export default function Node ({
         <div className="flex items-center gap-2.5 mb-8">
           <a href={joinLink} target="_blank" rel="noopener noreferrer">
             <button className="bg-[#2A2928] py-1 px-3 rounded-full text-white text-sm font-mono border-2 border-[#2A2928] flex items-center justify-center">
-              <Image src={ArrowUpRight} alt="Join" width={12} height={12} className="mr-2" />
+              <Image
+                src={ArrowUpRight}
+                alt="Join"
+                width={12}
+                height={12}
+                className="mr-2"
+              />
               JOIN
             </button>
           </a>
           {[
-            { link: websiteLink, icon: Globe, alt: "Website", borderColor: "border-black" },
-            { link: instagramLink, icon: InstagramLogo, alt: "Instagram", borderColor: "border-[#854F6F]" },
-            { link: twitterLink, icon: TwitterLogo, alt: "Twitter", borderColor: "border-[#649AEA]" },
-            { link: youtubeLink, icon: YoutubeLogo, alt: "Youtube", borderColor: "border-[#C6482C]" },
+            {
+              link: websiteLink,
+              icon: Globe,
+              alt: "Website",
+              borderColor: "border-black",
+            },
+            {
+              link: instagramLink,
+              icon: InstagramLogo,
+              alt: "Instagram",
+              borderColor: "border-[#854F6F]",
+            },
+            {
+              link: twitterLink,
+              icon: TwitterLogo,
+              alt: "Twitter",
+              borderColor: "border-[#649AEA]",
+            },
+            {
+              link: youtubeLink,
+              icon: YoutubeLogo,
+              alt: "Youtube",
+              borderColor: "border-[#C6482C]",
+            },
           ].map(({ link, icon, alt, borderColor }) => (
             <a
               key={alt}
@@ -74,7 +100,7 @@ export default function Node ({
           title={name}
           src={lumaLink}
           className="w-full md:w-[400px] h-[350px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#CFCCC4]"
-          style={{ margin: '0 auto' }}
+          style={{ margin: "0 auto" }}
           aria-hidden="false"
         />
       ) : imageSrc ? (
@@ -84,16 +110,22 @@ export default function Node ({
           width={400}
           height={350}
           className="w-full md:w-[400px] h-[350px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#CFCCC4]"
-          style={{ objectFit: 'cover', margin: '0 auto' }}
+          style={{ objectFit: "cover", margin: "0 auto" }}
         />
       ) : (
         <div></div>
       )}
 
       <button className="mt-4 bg-[#FFFCF3] py-1 px-3 rounded-full text-xs md:text-sm text-[#2A2928] font-mono border-2 border-dashed border-[#CFCCC4] flex items-center justify-center">
-        <Image src={CircleWavyCheck} alt="Date" width={24} height={24} className="mr-2" />
+        <Image
+          src={CircleWavyCheck}
+          alt="Date"
+          width={24}
+          height={24}
+          className="mr-2"
+        />
         {date}
       </button>
     </div>
   );
-};
+}

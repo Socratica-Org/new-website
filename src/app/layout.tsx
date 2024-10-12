@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/footer";
-import { headers } from 'next/headers';
+import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const headersList = headers();
-  const pathname = headersList.get('x-invoke-path') || '';
-  const showFooter = pathname !== '/map';
+  const pathname = headersList.get("x-invoke-path") || "";
+  const showFooter = pathname !== "/map";
 
   return (
     <html lang="en">
