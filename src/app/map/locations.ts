@@ -17,8 +17,7 @@ export const locations: {
     name: "Socratica",
     date: "MARCH 2022",
     location: "Waterloo, ON",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-cBMgU2QXqXZQSv1/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-cBMgU2QXqXZQSv1/events",
     joinLink: "https://lu.ma/socratica",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -31,8 +30,7 @@ export const locations: {
     name: "Socratica",
     date: "JANUARY 2023",
     location: "Toronto, ON",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-PxG5QruZfgz28XB/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-PxG5QruZfgz28XB/events",
     joinLink: "https://lu.ma/socraticaTO",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -45,8 +43,7 @@ export const locations: {
     name: "Atelier",
     date: "SEPTEMBER 2023",
     location: "Vancouver, BC",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-CvuDnsONPxinxqk/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-CvuDnsONPxinxqk/events",
     joinLink: "https://lu.ma/atelier.ubc",
     instagramLink: "https://www.instagram.com/atelier.ubc",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -59,8 +56,7 @@ export const locations: {
     name: "Scale Down",
     date: "OCTOBER 2023",
     location: "Cambridge, UK",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-vHCyjMqqjpdduOt/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-vHCyjMqqjpdduOt/events",
     joinLink: "https://lu.ma/scaledown",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -74,7 +70,7 @@ export const locations: {
   //     date: "OCTOBER 2023",
   //     location: "Ottawa, ON",
   //     lumaLink:
-  //       "https://lu.ma/embed/calendar/cal-xPDTKP81aHIflKD/events?lt=light",
+  //       "https://lu.ma/embed/calendar/cal-xPDTKP81aHIflKD/events",
   //     joinLink: "https://lu.ma/agora",
   //     instagramLink: "https://www.instagram.com/agora.cu",
   //     twitterLink: "https://twitter.com/socraticainfo",
@@ -87,8 +83,7 @@ export const locations: {
     name: "id8.blankcanvas",
     date: "OCTOBER 2023",
     location: "Kingston, ON",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-AxzTU0DF1vlwRSI/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-AxzTU0DF1vlwRSI/events",
     joinLink: "https://lu.ma/id8id8id8",
     instagramLink: "https://www.instagram.com/id8id8id8",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -101,8 +96,7 @@ export const locations: {
     name: "Side Project Sundays",
     date: "SEPTEMBER 2023",
     location: "Berkeley, CA",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-CRtUehgIQHLEB3o/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-CRtUehgIQHLEB3o/events",
     joinLink: "https://lu.ma/commonroom",
     instagramLink: "https://www.instagram.com/berkeleycommonroom",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -115,8 +109,7 @@ export const locations: {
     name: "Momentum",
     date: "SEPTEMBER 2023",
     location: "London, ON",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-gt0OmSf2cUw1HHl/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-gt0OmSf2cUw1HHl/events",
     joinLink: "https://lu.ma/moment.um",
     instagramLink: "https://www.instagram.com/momentum_uwo",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -129,8 +122,7 @@ export const locations: {
     name: "Friendly Beans",
     date: "DECEMBER 2023",
     location: "Cambridge, MA",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-yDZTDnxoCpg2xwE/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-yDZTDnxoCpg2xwE/events",
     joinLink: "https://lu.ma/beans",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -144,7 +136,7 @@ export const locations: {
   //     date: "JANUARY 2024",
   //     location: "San Francisco, CA",
   //     lumaLink:
-  //         "https://lu.ma/embed/calendar/cal-WrTTBMGBVUcTaij/events?lt=light",
+  //         "https://lu.ma/embed/calendar/cal-WrTTBMGBVUcTaij/events",
   //     joinLink: "https://lu.ma/playspace",
   //     instagramLink: "https://www.instagram.com/socratica.info",
   //     twitterLink: "https://twitter.com/socraticainfo",
@@ -157,8 +149,7 @@ export const locations: {
     name: "untitled",
     date: "JANUARY 2024",
     location: "Stanford, CA",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-bBCpTcywZinszKP/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-bBCpTcywZinszKP/events",
     joinLink: "https://lu.ma/untitled",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -171,8 +162,7 @@ export const locations: {
     name: "Sundays",
     date: "JANUARY 2024",
     location: "Los Angeles, CA",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-81AnmgiInWOKNmv/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-81AnmgiInWOKNmv/events",
     joinLink: "https://lu.ma/calendar/cal-81AnmgiInWOKNmv",
     instagramLink: "https://www.instagram.com/sundaysatusc",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -182,11 +172,10 @@ export const locations: {
   },
   {
     id: "montreal",
-    name: "DouzeaDeux",
+    name: "Douze a Deux",
     date: "SEPTEMBER 2023",
     location: "Montreal, QC",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-PIrfoWlJDawpNDO/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-PIrfoWlJDawpNDO/events",
     joinLink: "https://lu.ma/douzeadeuxMontreal",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -199,8 +188,7 @@ export const locations: {
     name: "Saturdays",
     date: "NOVEMEBER 2023",
     location: "Seattle, WA",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-SD9FoHuZW6pQn6D/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-SD9FoHuZW6pQn6D/events",
     joinLink: "https://lu.ma/uwsaturdays",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -213,8 +201,7 @@ export const locations: {
     name: "Hatch",
     date: "JANUARY 2024",
     location: "Chapel Hill, NC",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-p0CcDhZn6Z5elyX/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-p0CcDhZn6Z5elyX/events",
     joinLink: "https://lu.ma/unc-hatch",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -227,8 +214,7 @@ export const locations: {
     name: "Craft",
     date: "JANUARY 2024",
     location: "London, UK",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-qFfyVkBdmPJ7yBv/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-qFfyVkBdmPJ7yBv/events",
     joinLink: "https://lu.ma/craft_",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
@@ -241,8 +227,7 @@ export const locations: {
     name: "ichinichiippo",
     date: "JANUARY 2024",
     location: "Tokyo, Japan",
-    lumaLink:
-      "https://lu.ma/embed/calendar/cal-vyilWokPjL5xHKF/events?lt=light",
+    lumaLink: "https://lu.ma/embed/calendar/cal-vyilWokPjL5xHKF/events",
     joinLink: "https://lu.ma/ichinichi-ippo",
     instagramLink: "https://www.instagram.com/_ichinichiippo/",
     twitterLink: "https://twitter.com/socraticainfo",

@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import Globe from "../../../public/images/Globe.svg";
+import Globe from "../../../public/images/white-globe.svg";
 import InstagramLogo from "../../../public/images/instagram-logo.svg";
 import TwitterLogo from "../../../public/images/twitter-logo.svg";
 import YoutubeLogo from "../../../public/images/youtube-logo.svg";
-import ArrowUpRight from "../../../public/images/right-arrow.svg";
+import ArrowUpRight from "../../../public/images/black-right-arrow.svg";
 import CircleWavyCheck from "../../../public/images/CircleWavyCheck.svg";
 
 interface NodeProps {
@@ -35,17 +35,17 @@ export default function Node({
   imageSrc,
 }: NodeProps) {
   return (
-    <div id={id} className="flex flex-col items-center justify-center">
-      <div className="w-full text-left">
-        <h1 className="text-3xl md:text-5xl text-black font-normal font-tiempos">
+    <div id={id} className="flex flex-col">
+      <div className="w-full text-left pl-2">
+        <h1 className="text-3xl md:text-5xl text-white font-normal font-tiempos">
           {name}
         </h1>
-        <div className="-mt-4 mb-8">
+        <div className="mb-4">
           <p className="font-sf-mono text-sm text-[#A09D98]">{location}</p>
         </div>
         <div className="flex items-center gap-2.5 mb-8">
           <a href={joinLink} target="_blank" rel="noopener noreferrer">
-            <button className="bg-[#2A2928] py-1 px-3 rounded-full text-white text-sm font-mono border-2 border-[#2A2928] flex items-center justify-center">
+            <button className="bg-primary py-2 px-4 rounded-full text-[#2A2928] text-sm font-mono border-2 border-primary flex items-center justify-center">
               <Image
                 src={ArrowUpRight}
                 alt="Join"
@@ -61,13 +61,13 @@ export default function Node({
               link: websiteLink,
               icon: Globe,
               alt: "Website",
-              borderColor: "border-black",
+              borderColor: "border-white",
             },
             {
               link: instagramLink,
               icon: InstagramLogo,
               alt: "Instagram",
-              borderColor: "border-[#854F6F]",
+              borderColor: "border-[#bf6f9f]",
             },
             {
               link: twitterLink,
@@ -79,7 +79,7 @@ export default function Node({
               link: youtubeLink,
               icon: YoutubeLogo,
               alt: "Youtube",
-              borderColor: "border-[#C6482C]",
+              borderColor: "border-[#d94221]",
             },
           ].map(({ link, icon, alt, borderColor }) => (
             <a
@@ -99,7 +99,7 @@ export default function Node({
         <iframe
           title={name}
           src={lumaLink}
-          className="w-full md:w-[400px] h-[350px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#CFCCC4]"
+          className="w-full md:w-[400px] h-[500px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#CFCCC4]"
           style={{ margin: "0 auto" }}
           aria-hidden="false"
         />
@@ -109,23 +109,25 @@ export default function Node({
           alt="socratica node preview"
           width={400}
           height={350}
-          className="w-full md:w-[400px] h-[350px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#CFCCC4]"
+          className="w-full md:w-[400px] h-[500px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#CFCCC4]"
           style={{ objectFit: "cover", margin: "0 auto" }}
         />
       ) : (
         <div></div>
       )}
 
-      <button className="mt-4 bg-[#FFFCF3] py-1 px-3 rounded-full text-xs md:text-sm text-[#2A2928] font-mono border-2 border-dashed border-[#CFCCC4] flex items-center justify-center">
-        <Image
-          src={CircleWavyCheck}
-          alt="Date"
-          width={24}
-          height={24}
-          className="mr-2"
-        />
-        {date}
-      </button>
+      <div className="flex items-center mt-4 pl-2">
+        <button className=" py-1 px-3 rounded-full text-xs md:text-sm text-white font-mono border-2 border-dashed border-[#CFCCC4] flex items-center">
+          <Image
+            src={CircleWavyCheck}
+            alt="Date"
+            width={24}
+            height={24}
+            className="mr-2"
+          />
+          {date}
+        </button>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function AboutPage() {
     <div
       className={`${isDarkMode ? "bg-off-black" : "bg-primary"} min-h-screen min-w-full flex flex-col px-10`}
     >
-      <Topbar isDarkMode={isDarkMode} />
+      <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />
 
       {/* QUOTES BLOCKS - should probably turn the blocks into a component*/}
       <div className="grid grid-cols-4 min-w-full mt-[70px] mb-[100px]">

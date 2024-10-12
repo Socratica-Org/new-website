@@ -18,6 +18,7 @@ const config: Config = {
       },
       colors: {
         "soft-grey": "#A09D98",
+        primary: "#FBF8EF",
       },
       fontFamily: {
         tiempos: ["Tiempos Headline", "serif"],
