@@ -240,7 +240,7 @@ export const locations: {
     name: "Code & Coffee",
     date: "SEPTEMBER 2024",
     location: "Philadelphia, PA",
-    lumaLink: "https://lu.ma/embed/calendar/cal-vyilWokPjL5xHKF/events",
+    lumaLink: "https://lu.ma/embed/calendar/cal-ftxaA6PDR5Tbllt/events",
     joinLink: "https://lu.ma/code-and-coffee",
     instagramLink: "https://www.instagram.com/socratica.info",
     twitterLink: "https://twitter.com/socraticainfo",
