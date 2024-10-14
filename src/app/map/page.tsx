@@ -56,11 +56,10 @@ export default function MapPage() {
     }
 
     map.current?.on("load", () => {
-
-      map.current?.setPaintProperty('land', 'background-color', '#c6cca5'); // Beige land
-      map.current?.setPaintProperty('water', 'fill-color', '#93d1e6'); // Beige water
+      map.current?.setPaintProperty("land", "background-color", "#c6cca5"); // Beige land
+      map.current?.setPaintProperty("water", "fill-color", "#93d1e6"); // Beige water
       // map.current?.setPaintProperty('road', 'line-color', 'rgba(222, 184, 135, 1)'); // Beige roads
-      
+
       // Add markers
       locations.forEach((location) => {
         const el = document.createElement("div");
@@ -74,7 +73,6 @@ export default function MapPage() {
         const marker = new mapboxgl.Marker(el)
           .setLngLat([location.coordinates[1], location.coordinates[0]])
           .addTo(map.current!);
-
 
         marker.getElement().addEventListener("click", () => {
           setSelectedLocation(location);

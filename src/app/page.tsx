@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import { isMobile } from "react-device-detect";
 import Image from "next/image";
 import Topbar from "./components/topbar";
+import MobileNavbar from "./components/mobile-navbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 import LatticeCard from "./components/lattice-card";
 
@@ -79,22 +81,40 @@ export default function Home() {
     <div
       className={`transition-colors duration-1000 ${
         isDarkMode ? "bg-off-black" : "bg-primary"
-      } min-h-screen min-w-full flex flex-col px-10`}
+      } min-h-screen min-w-full flex flex-col px-4 md:px-10`}
     >
-      <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />
-      <div className="flex flex-col justify-center mt-8">
+      {!isMobile && <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />}
+      {isMobile && (
+        <div className="flex justify-between items-center py-4">
+          {/* <Image
+            src="images/doodles/socratica-big.svg"
+            alt="Socratica"
+            width={150}
+            height={150}
+          /> */}
+          <Image
+            src="images/logo.svg"
+            alt="Asterism"
+            width={36}
+            height={36}
+          />
+          <MobileNavbar />
+        </div>
+      )}
+      <div className="flex flex-col justify-center mt-2 md:mt-8">
+        {/* {!isMobile && <DoodleSwitcher />} */}
         <DoodleSwitcher />
         <video
           src="/landing-video.mov"
           autoPlay
           loop
           muted
-          className="mt-4 rounded-2xl"
+          className="mt-0 md:mt-4 rounded-2xl"
         />
       </div>
 
-      <div className="mt-8 flex">
-        <div className="w-3/5">
+      <div className="mt-8 flex flex-col md:flex-row">
+        <div className="w-full md:w-3/5">
           <p className="font-tiempos text-5xl leading-none">
             Socratica is an open collective of makers, artists, founders,
             researchers, designers, and everything <i>in-between</i>.

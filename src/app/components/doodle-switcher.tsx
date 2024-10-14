@@ -42,7 +42,7 @@ export default function DoodleSwitcher() {
   const currentDoodle = doodles[currentIndex];
 
   return (
-    <div className="flex flex-col items-center relative -mb-8 md:mb-0">
+    <div className="flex flex-col items-center relative -mb-24 md:mb-0 -mt-16 md:mt-0">
       <button
         onClick={switchDoodle}
         className="absolute inset-0 opacity-0 cursor-pointer"
