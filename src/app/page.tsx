@@ -86,18 +86,18 @@ export default function Home() {
       {!isMobile && <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />}
       {isMobile && (
         <div className="flex justify-between items-center py-4">
-          {/* <Image
+          <Image
             src="images/doodles/socratica-big.svg"
             alt="Socratica"
             width={150}
             height={150}
-          /> */}
-          <Image
+          />
+          {/* <Image
             src="images/logo.svg"
             alt="Asterism"
             width={36}
             height={36}
-          />
+          /> */}
           <MobileNavbar />
         </div>
       )}
@@ -115,7 +115,7 @@ export default function Home() {
 
       <div className="mt-8 flex flex-col md:flex-row">
         <div className="w-full md:w-3/5">
-          <p className="font-tiempos text-5xl leading-none">
+          <p className="font-tiempos text-4xl md:text-5xl leading-none">
             Socratica is an open collective of makers, artists, founders,
             researchers, designers, and everything <i>in-between</i>.
           </p>
