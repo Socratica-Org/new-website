@@ -96,7 +96,7 @@ export default function Node({
       </div>
 
       <div className="flex items-center mt-8 pl-2 mb-4">
-        <button className=" py-1 px-3 rounded-full text-xs md:text-sm text-white font-mono border-2 border-dashed border-[#CFCCC4] flex items-center">
+        <button className=" py-1 px-3 rounded-full text-xs md:text-sm text-white font-mono border-2 border-dashed border-[#A09D98] flex items-center">
           <Image
             src={CircleWavyCheck}
             alt="Date"

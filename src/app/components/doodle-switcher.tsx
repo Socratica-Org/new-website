@@ -1,13 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const doodles = [
   {
-    src: "images/doodles/doodle1.png",
+    src: "/images/doodles/doodle1.png",
     title: '"Little Guys", by Aileen Luo',
   },
   {
-    src: "images/doodles/doodle2.png",
+    src: "/images/doodles/doodle2.png",
     title: '"Project Block"',
   },
   // {
@@ -15,11 +16,11 @@ const doodles = [
   //   title: `"Aileen's Worst Nightmare", by Jake Rudolph`,
   // },
   {
-    src: "images/doodles/doodle4.png",
+    src: "/images/doodles/doodle4.png",
     title: '"MS Paint", by HudZah',
   },
   {
-    src: "images/doodles/socratica-big.svg",
+    src: "/images/doodles/socratica-big.svg",
     title: "Big Socratica Doodle",
   },
   //   {
@@ -49,11 +50,15 @@ export default function DoodleSwitcher() {
         aria-label="Switch doodle"
       />
 
-      <img
+      <Image
         id="socraticaLogo"
         src={currentDoodle.src}
         alt={currentDoodle.title}
         className="h-[325px] w-auto object-contain"
+        height={325}
+        width={325}
+        quality={100}
+        priority
       />
 
       {/* <div className="w-full flex flex-col items-end mt-8 mr-16">

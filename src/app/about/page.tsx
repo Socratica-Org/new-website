@@ -52,10 +52,11 @@ export default function AboutPage() {
             height={40}
           />
           <h1 className="text-[#131313]">
-            “There are actually THOUSANDS of people who have been 'caught' by
-            the extended Socratica network when feeling deeply lonely, when
-            moving to new cities, and when going through life periods where they
-            really need support in figuring out who they are. ”
+            “There are actually THOUSANDS of people who have been
+            &apos;caught&apos; by the extended Socratica network when feeling
+            deeply lonely, when moving to new cities, and when going through
+            life periods where they really need support in figuring out who they
+            are. ”
           </h1>
           <div className="flex flex-row justify-between">
             <p className="text-[#9E9797] font-[500] tracking-[-1px]">
@@ -181,8 +182,9 @@ export default function AboutPage() {
             height={60}
           />
           <h1 className="text-[#FFFCF3]">
-            we're in a <span className="font-bold">loving each</span> other
-            competition and we're all <span className="font-bold">winning</span>
+            we&apos;re in a <span className="font-bold">loving each</span> other
+            competition and we&apos;re all{" "}
+            <span className="font-bold">winning</span>
           </h1>
           <div className="flex flex-row justify-between">
             <p className="text-[#FFEAD9] font-[500] tracking-[-1px]">
@@ -211,7 +213,7 @@ export default function AboutPage() {
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
             “literally the{" "}
             <span className="text-[#000000]">
-              best thing since <br></br>sliced bread"
+              best thing since <br></br>sliced bread“
             </span>
           </h1>
           <div className="flex flex-row justify-between">
@@ -280,8 +282,9 @@ export default function AboutPage() {
             height={60}
           />
           <h1 className="text-[#FFFCF3]">
-            we're in a <span className="font-bold">loving each</span> other
-            competition and we're all <span className="font-bold">winning</span>
+            we&apos;re in a <span className="font-bold">loving each</span> other
+            competition and we&apos;re all{" "}
+            <span className="font-bold">winning</span>
           </h1>
           <div className="flex flex-row justify-between">
             <p className="text-[#FFFCF3] font-[500] tracking-[-1px]">
@@ -338,7 +341,7 @@ export default function AboutPage() {
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
             “literally the{" "}
             <span className="text-[#000000]">
-              best thing since <br></br>sliced bread"
+              best thing since <br></br>sliced bread&quot;
             </span>
           </h1>
           <div className="flex flex-row justify-between">
@@ -394,7 +397,7 @@ export default function AboutPage() {
           />
           <div className="flex flex-row items-center">
             <h1 className="text-[#131313] font-tiempos text-4xl leading-none tracking-[-1px]">
-              “the greatest student event<br></br> I’ve ever seen"
+              “the greatest student event<br></br> I’ve ever seen&quot;
             </h1>
             <Image
               className="mx-auto"
@@ -433,7 +436,7 @@ export default function AboutPage() {
             <div className="w-[20%]"></div>
             <h1 className="text-[#E9EDC9] font-tiempos text-6xl leading-none tracking-[-1px] text-center">
               “<span className="text-[#AAB172]">socratica is</span> the love of
-              my life"
+              my life&quot;
             </h1>
             <Image
               className="mx-auto"

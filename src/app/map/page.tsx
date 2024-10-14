@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -14,6 +14,14 @@ import { Location } from "../types";
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || "";
 
 export default function MapPage() {
+  return (
+    <Suspense fallback="Loading map...">
+      <MapPageContent />
+    </Suspense>
+  );
+}
+
+const MapPageContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(
@@ -120,4 +128,4 @@ export default function MapPage() {
       </div>
     </>
   );
-}
+};

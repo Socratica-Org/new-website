@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MobileNavbar from "./mobile-navbar";
+import Image from "next/image";
 
 export default function TopBar({
   isDarkMode,
@@ -73,7 +73,7 @@ export default function TopBar({
             target="_blank"
             className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 flex items-center`}
           >
-            <img
+            <Image
               src={
                 isDarkMode
                   ? "images/right-arrow.svg"
@@ -81,6 +81,8 @@ export default function TopBar({
               }
               className="mr-2"
               alt="Donate arrow"
+              width={12}
+              height={12}
             />
             <span>DONATE</span>
           </a>
@@ -89,7 +91,7 @@ export default function TopBar({
             target="_blank"
             className={`font-dm-mono ${isDarkMode ? "bg-white text-black" : "bg-black text-white"} border ${borderColor} border-b-2 rounded-full px-4 py-2 flex items-center`}
           >
-            <img
+            <Image
               src={
                 isDarkMode
                   ? "images/black-right-arrow.svg"
@@ -97,6 +99,8 @@ export default function TopBar({
               }
               className="mr-2"
               alt="Join arrow"
+              width={12}
+              height={12}
             />
             <span>JOIN</span>
           </a>

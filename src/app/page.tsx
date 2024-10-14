@@ -151,34 +151,34 @@ export default function Home() {
 
       {isMobile && (
         <div>
-        <div className="mt-8 flex flex-col">
-          <p className="font-tiempos text-4xl leading-none">
-            Socratica is an open collective of makers, artists, founders,
-            researchers, designers, and everything <i>in-between</i>.
-          </p>
+          <div className="mt-8 flex flex-col">
+            <p className="font-tiempos text-4xl leading-none">
+              Socratica is an open collective of makers, artists, founders,
+              researchers, designers, and everything <i>in-between</i>.
+            </p>
 
-          <div className="mt-4 flex">
-            <a className="bg-black text-white text-md rounded-full flex items-center px-4 py-2 uppercase font-dm-mono">
-              <Image
-                src="/images/right-arrow.svg"
-                alt="Right Arrow"
-                width={12}
-                height={12}
-                className="mr-2"
-              />
-              Join a Session
-            </a>
+            <div className="mt-4 flex">
+              <a className="bg-black text-white text-md rounded-full flex items-center px-4 py-2 uppercase font-dm-mono">
+                <Image
+                  src="/images/right-arrow.svg"
+                  alt="Right Arrow"
+                  width={12}
+                  height={12}
+                  className="mr-2"
+                />
+                Join a Session
+              </a>
+            </div>
+
+            <p className="mt-8 text-xl font-inter-variable tracking-tight leading-none">
+              We are multidisciplinary in our crafts, and a safe space for our
+              shared love of making things*.
+            </p>
+            <p className="mt-4 text-lg text-soft-grey">
+              <i>*whatever your thing may be.</i>
+            </p>
           </div>
-
-          <p className="mt-8 text-xl font-inter-variable tracking-tight leading-none">
-            We are multidisciplinary in our crafts, and a safe space for our
-            shared love of making things*.
-          </p>
-          <p className="mt-4 text-lg text-soft-grey">
-            <i>*whatever your thing may be.</i>
-          </p>
         </div>
-      </div>
       )}
 
       <div className="mt-16 flex flex-row">
@@ -313,7 +313,7 @@ export default function Home() {
         <div className="mt-20 w-3/5 text-center">
           <p className="font-tiempos text-5xl">
             We host co-working sessions for you to get started on that{" "}
-            <i>thing</i> you've been meaning to do.
+            <i>thing</i> you&apos;ve been meaning to do.
           </p>
         </div>
       </div>
