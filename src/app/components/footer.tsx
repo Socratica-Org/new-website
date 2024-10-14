@@ -27,7 +27,10 @@ export default function Footer() {
             >
               <p>LINKEDIN</p>
             </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSel0ZjxRpWJDDIe-CoJjbCDcqONsMWPClIrH7csZNOIhqETHA/viewform" target="_blank">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSel0ZjxRpWJDDIe-CoJjbCDcqONsMWPClIrH7csZNOIhqETHA/viewform"
+              target="_blank"
+            >
               <p>FEEDBACK JAR</p>
             </a>
           </div>

@@ -113,37 +113,73 @@ export default function Home() {
         />
       </div>
 
-      <div className="mt-8 flex flex-col md:flex-row">
-        <div className="w-full md:w-3/5">
-          <p className="font-tiempos text-4xl md:text-5xl leading-none">
+      {!isMobile && (
+        <div>
+          <div className="mt-8 flex flex-col md:flex-row">
+            <div className="w-full md:w-3/5">
+              <p className="font-tiempos text-4xl md:text-5xl leading-none">
+                Socratica is an open collective of makers, artists, founders,
+                researchers, designers, and everything <i>in-between</i>.
+              </p>
+            </div>
+            <div className="w-[15%]" />
+            <div className="w-1/4">
+              <p className="text-lg font-inter-variable tracking-tight leading-none">
+                We are multidisciplinary in our crafts, and a safe space for our
+                shared love of making things*.
+              </p>
+              <p className="mt-10 text-lg text-soft-grey">
+                <i>*whatever your thing may be.</i>
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 flex">
+            <a className="bg-black text-white rounded-full flex items-center px-6 py-3 uppercase font-dm-mono">
+              <Image
+                src="/images/right-arrow.svg"
+                alt="Right Arrow"
+                width={12}
+                height={12}
+                className="mr-2"
+              />
+              Join a Session
+            </a>
+          </div>
+        </div>
+      )}
+
+      {isMobile && (
+        <div>
+        <div className="mt-8 flex flex-col">
+          <p className="font-tiempos text-4xl leading-none">
             Socratica is an open collective of makers, artists, founders,
             researchers, designers, and everything <i>in-between</i>.
           </p>
-        </div>
-        <div className="w-[15%]" />
-        <div className="w-1/4">
-          <p className="text-lg font-inter-variable tracking-tight leading-none">
+
+          <div className="mt-4 flex">
+            <a className="bg-black text-white text-md rounded-full flex items-center px-4 py-2 uppercase font-dm-mono">
+              <Image
+                src="/images/right-arrow.svg"
+                alt="Right Arrow"
+                width={12}
+                height={12}
+                className="mr-2"
+              />
+              Join a Session
+            </a>
+          </div>
+
+          <p className="mt-8 text-xl font-inter-variable tracking-tight leading-none">
             We are multidisciplinary in our crafts, and a safe space for our
             shared love of making things*.
           </p>
-          <p className="mt-10 text-lg text-soft-grey">
+          <p className="mt-4 text-lg text-soft-grey">
             <i>*whatever your thing may be.</i>
           </p>
         </div>
       </div>
-
-      <div className="mt-8 flex">
-        <a className="bg-black text-white rounded-full flex items-center px-6 py-3 uppercase font-dm-mono">
-          <Image
-            src="/images/right-arrow.svg"
-            alt="Right Arrow"
-            width={12}
-            height={12}
-            className="mr-2"
-          />
-          Join a Session
-        </a>
-      </div>
+      )}
 
       <div className="mt-16 flex flex-row">
         <div className="w-1/2">
