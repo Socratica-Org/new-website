@@ -30,10 +30,10 @@ export default function Popup({
 }) {
   return (
     <div
-      className="fixed top-1/2 right-5 transform -translate-y-1/2 z-50 bg-white p-4 rounded-lg shadow-lg"
+      className="fixed top-1/2 right-5 transform -translate-y-1/2 z-50 bg-white p-4 rounded-md shadow-lg"
       style={overlayStyle}
     >
-      <button onClick={onClose} className="absolute top-2 right-2 text-white">
+      <button onClick={onClose} className="absolute top-5 right-5 text-white">
         <X size={24} />
       </button>
       <Node

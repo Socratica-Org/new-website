@@ -39,30 +39,6 @@ export default function MapPage() {
     }
   }, [searchParams]);
 
-  // useEffect(() => {
-  //   if (selectedLocation) {
-  //     const popupNode = document.getElementById(`popup-${selectedLocation.id}`);
-  //     if (popupNode) {
-  //       ReactDOM.render(
-  //         <Node
-  //           id={selectedLocation.id}
-  //           name={selectedLocation.name}
-  //           date={selectedLocation.date}
-  //           location={selectedLocation.location.toUpperCase()}
-  //           lumaLink={selectedLocation.lumaLink}
-  //           imageSrc={selectedLocation.imageSrc}
-  //           joinLink={selectedLocation.joinLink}
-  //           websiteLink={selectedLocation.websiteLink}
-  //           instagramLink={selectedLocation.instagramLink}
-  //           twitterLink={selectedLocation.twitterLink}
-  //           youtubeLink={selectedLocation.youtubeLink}
-  //         />,
-  //         popupNode
-  //       );
-  //     }
-  //   }
-  // }, [selectedLocation]);
-
   useEffect(() => {
     if (mapContainer.current) {
       map.current = new mapboxgl.Map({
@@ -80,6 +56,11 @@ export default function MapPage() {
     }
 
     map.current?.on("load", () => {
+
+      map.current?.setPaintProperty('land', 'background-color', '#c6cca5'); // Beige land
+      map.current?.setPaintProperty('water', 'fill-color', '#93d1e6'); // Beige water
+      // map.current?.setPaintProperty('road', 'line-color', 'rgba(222, 184, 135, 1)'); // Beige roads
+      
       // Add markers
       locations.forEach((location) => {
         const el = document.createElement("div");
@@ -94,25 +75,6 @@ export default function MapPage() {
           .setLngLat([location.coordinates[1], location.coordinates[0]])
           .addTo(map.current!);
 
-        // const popupContent = ReactDOMServer.renderToString(
-        //   <Node
-        //     id={location.id}
-        //     name={location.name}
-        //     date={location.date}
-        //     location={location.location.toUpperCase()}
-        //     lumaLink={location.lumaLink}
-        //     imageSrc={location.imageSrc}
-        //     joinLink={location.joinLink}
-        //     websiteLink={location.websiteLink}
-        //     instagramLink={location.instagramLink}
-        //     twitterLink={location.twitterLink}
-        //     youtubeLink={location.youtubeLink}
-        //   />
-        // );
-
-        // const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(popupContent);
-
-        // marker.setPopup(popup);
 
         marker.getElement().addEventListener("click", () => {
           setSelectedLocation(location);
@@ -142,30 +104,6 @@ export default function MapPage() {
     newSearchParams.delete("location");
     router.push(`?${newSearchParams.toString()}`, { scroll: false });
   };
-
-  // return (
-  //   // <div>
-  //   //   <div ref={mapContainer} className="map-container" style={{ width: '100vw', height: '100vh' }} />
-  //   // </div>
-  //   <>
-  //     <TopBar isDarkMode={false} isHeaderVisible={false} />
-  //     <div
-  //       ref={mapContainer}
-  //       className="map-container"
-  //       style={{ width: "100vw", height: "100vh", position: "relative" }}
-  //     >
-  //       {/* {selectedLocation && (
-  //         <div className="absolute">
-  //           <Popup location={selectedLocation} onClose={closePopup} />
-  //         </div>
-  //       )} */}
-
-  //       {selectedLocation && (
-  //         <Popup location={selectedLocation} onClose={closePopup} />
-  //       )}
-  //     </div>
-  //   </>
-  // );
 
   return (
     <>
