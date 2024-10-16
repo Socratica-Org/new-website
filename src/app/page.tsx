@@ -86,12 +86,13 @@ export default function Home() {
       {!isMobile && <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />}
       {isMobile && (
         <div className="flex justify-between items-center py-4">
-          <Image
+          {/* <Image
             src="images/doodles/socratica-big.svg"
             alt="Socratica"
             width={150}
             height={150}
-          />
+          /> */}
+          {isMobile && <DoodleSwitcher />}
           {/* <Image
             src="images/logo.svg"
             alt="Asterism"
@@ -101,15 +102,17 @@ export default function Home() {
           <MobileNavbar />
         </div>
       )}
-      <div className="flex flex-col justify-center mt-2 md:mt-8">
-        {/* {!isMobile && <DoodleSwitcher />} */}
-        <DoodleSwitcher />
+
+      <div className="flex flex-col justify-center mt-16 md:mt-8">
+        {!isMobile && <DoodleSwitcher />}
+        {/* <DoodleSwitcher /> */}
         <video
           src="/landing-video.mov"
           autoPlay
           loop
           muted
           className="mt-0 md:mt-4 rounded-2xl"
+          style={{ objectFit: "cover", height: "50vh" }}
         />
       </div>
 
@@ -181,49 +184,50 @@ export default function Home() {
         </div>
       )}
 
-      {!isMobile && <div className="mt-16 flex flex-row">
-        <div className="w-1/2">
-          <Image
-            src="/images/symposium-w24.svg"
-            alt="Symposium Winter 2024"
-            width={670}
-            height={670}
-          />
-        </div>
-        <div className="w-1/2 flex flex-col">
-          <div className="flex flex-row pl-4 space-x-4">
-            <div className="w-1/2">
-              <Image
-                src="/images/socratica-s24.svg"
-                alt="Socratica Summer 2024"
-                width={325}
-                height={478}
-              />
+      {!isMobile && (
+        <div className="mt-16 flex flex-row">
+          <div className="w-1/2">
+            <Image
+              src="/images/symposium-w24.svg"
+              alt="Symposium Winter 2024"
+              width={670}
+              height={670}
+            />
+          </div>
+          <div className="w-1/2 flex flex-col">
+            <div className="flex flex-row pl-4 space-x-4">
+              <div className="w-1/2">
+                <Image
+                  src="/images/socratica-s24.svg"
+                  alt="Socratica Summer 2024"
+                  width={325}
+                  height={478}
+                />
+              </div>
+              <div className="w-1/2">
+                <Image
+                  src="/images/kickoff-f23.svg"
+                  alt="Kickoff Fall 2023"
+                  width={325}
+                  height={478}
+                />
+              </div>
             </div>
-            <div className="w-1/2">
-              <Image
-                src="/images/kickoff-f23.svg"
-                alt="Kickoff Fall 2023"
-                width={325}
-                height={478}
-              />
+            <div className="mt-12 px-4 text-2xl pr-8">
+              <p className="font-inter-variable tracking-tight leading-none">
+                Great creative work is historically done together, across
+                backgrounds and disciplines, in small, high trust groups.
+              </p>
+              <p className="mt-10 font-inter-variable tracking-tight leading-none">
+                This is the foundation of boundary pushing work - in
+                engineering, science, art, and more.
+              </p>
             </div>
           </div>
-          <div className="mt-12 px-4 text-2xl pr-8">
-            <p className="font-inter-variable tracking-tight leading-none">
-              Great creative work is historically done together, across
-              backgrounds and disciplines, in small, high trust groups.
-            </p>
-            <p className="mt-10 font-inter-variable tracking-tight leading-none">
-              This is the foundation of boundary pushing work - in engineering,
-              science, art, and more.
-            </p>
-          </div>
         </div>
-      </div>
-}
+      )}
 
-      {isMobile &&
+      {isMobile && (
         <div className="flex flex-col mt-8">
           <Image
             src="/images/symposium-w24.svg"
@@ -250,7 +254,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      }
+      )}
 
       <div className="my-24 mb-48 md:my-52 md:mb-96 flex flex-col justify-center items-center relative">
         {!isMobile && (

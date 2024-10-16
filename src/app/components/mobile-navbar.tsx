@@ -47,7 +47,7 @@ export default function MobileNavbar() {
         </button>
       </div>
 
-      {showOverlay &&
+      {showOverlay && (
         <div className="fixed inset-0 bg-black z-40">
           <button
             className="absolute top-4 right-4 text-white text-2xl leading-none"
@@ -55,9 +55,7 @@ export default function MobileNavbar() {
           >
             <X size={24} />
           </button>
-          <div
-            className="absolute z-50 top-10 left-3"
-          >
+          <div className="absolute z-50 top-10 left-3">
             {/* <img src={SocraticaWhite} alt="Socratica" /> */}
             <Image
               src="/images/SocraticaWhite.svg"
@@ -66,9 +64,7 @@ export default function MobileNavbar() {
               height={300}
             />
           </div>
-          <div
-            className="absolute top-40 left-3 flex flex-col space-y-4 items-start z-40"
-          >
+          <div className="absolute top-40 left-3 flex flex-col space-y-4 items-start z-40">
             <a
               href="/"
               className="font-dm-mono text-white border border-white border-b-2 rounded-full px-4 py-2 hover:bg-orange transition-colors duration-500 ease-in-out"
@@ -124,7 +120,7 @@ export default function MobileNavbar() {
             </a>
           </div>
         </div>
-      }
+      )}
     </div>
   );
 }

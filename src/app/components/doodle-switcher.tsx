@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import Image from "next/image";
 
 const doodles = [
@@ -29,19 +30,30 @@ const doodles = [
   //   }
 ];
 
-export default function DoodleSwitcher() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const MobileContent = ({ switchDoodle, currentDoodle }: any) => {
+  return (
+    <div className="absolute top-2 left-2">
+      <button
+        onClick={switchDoodle}
+        className="absolute inset-0 opacity-0 cursor-pointer"
+        aria-label="Switch doodle"
+      />
 
-  useEffect(() => {
-    setCurrentIndex(Math.floor(Math.random() * doodles.length));
-  }, []);
+      <Image
+        id="socraticaLogo"
+        src={currentDoodle.src}
+        alt={currentDoodle.title}
+        // className="h-[80px] w-auto object-contain"
+        width={150}
+        height={150}
+        quality={100}
+        priority
+      />
+    </div>
+  );
+};
 
-  const switchDoodle = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % doodles.length);
-  };
-
-  const currentDoodle = doodles[currentIndex];
-
+const DesktopContent = ({ switchDoodle, currentDoodle }: any) => {
   return (
     <div className="flex flex-col items-center relative -mb-24 md:mb-0 -mt-16 md:mt-0">
       <button
@@ -70,5 +82,35 @@ export default function DoodleSwitcher() {
         </p>
       </div> */}
     </div>
+  );
+};
+
+export default function DoodleSwitcher() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    setCurrentIndex(Math.floor(Math.random() * doodles.length));
+  }, []);
+
+  const switchDoodle = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % doodles.length);
+  };
+
+  const currentDoodle = doodles[currentIndex];
+
+  return (
+    <>
+      {isMobile ? (
+        <MobileContent
+          switchDoodle={switchDoodle}
+          currentDoodle={currentDoodle}
+        />
+      ) : (
+        <DesktopContent
+          switchDoodle={switchDoodle}
+          currentDoodle={currentDoodle}
+        />
+      )}
+    </>
   );
 }
