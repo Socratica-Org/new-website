@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { isMobile } from "react-device-detect";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import ReactDOM from "react-dom";
@@ -9,6 +10,7 @@ import { locations } from "./locations";
 import Node from "../components/node";
 import Popup from "../components/popup";
 import TopBar from "../components/topbar";
+import MobileNavbar from "../components/mobile-navbar";
 import { Location } from "../types";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || "";
@@ -113,9 +115,17 @@ const MapPageContent = () => {
 
   return (
     <>
-      <div className="absolute top-0 left-0 right-0 z-10">
-        <TopBar isDarkMode={false} isHeaderVisible={false} />
-      </div>
+      {!isMobile && (
+        <div className="absolute top-0 left-0 right-0 z-10">
+          <TopBar isDarkMode={false} isHeaderVisible={false} />
+        </div>
+      )}
+
+      {isMobile && (
+        <div className="absolute top-4 right-4 z-10">
+          <MobileNavbar />
+        </div>
+      )}
 
       <div
         ref={mapContainer}

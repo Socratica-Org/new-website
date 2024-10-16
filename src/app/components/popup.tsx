@@ -14,8 +14,8 @@ const overlayStyle = {
   position: "absolute" as const,
   top: "50%",
   right: "2.5%",
-  width: "450px",
-  height: "760px",
+  // width: "450px",
+  // height: "760px",
   marginTop: "-387px",
   overflowY: "auto" as const,
 };
@@ -29,7 +29,7 @@ export default function Popup({
 }) {
   return (
     <div
-      className="fixed top-1/2 right-5 transform -translate-y-1/2 z-50 bg-white p-4 rounded-xl shadow-lg"
+      className="fixed top-1/2 right-5 transform -translate-y-1/2 z-50 bg-white p-4 rounded-xl shadow-lg w-[400px] h-[760px] md:w-[450px] md:h-[760px]"
       style={overlayStyle}
     >
       <button onClick={onClose} className="absolute top-5 right-5 text-white">
