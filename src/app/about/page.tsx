@@ -1,7 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { isMobile } from "react-device-detect";
 import Image from "next/image";
 import Topbar from "../components/topbar";
+import MobileNavbar from "../components/mobile-navbar";
 
 export default function AboutPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -9,7 +11,8 @@ export default function AboutPage() {
     <div
       className={`${isDarkMode ? "bg-off-black" : "bg-primary"} min-h-screen min-w-full flex flex-col px-10`}
     >
-      <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />
+      {!isMobile && <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />}
+      {isMobile && <MobileNavbar />}
 
       {/* QUOTES BLOCKS - should probably turn the blocks into a component*/}
       <div className="grid grid-cols-4 min-w-full mt-[70px] mb-[100px]">

@@ -223,81 +223,85 @@ export default function Home() {
       </div>
 
       <div className="my-52 mb-96 flex flex-col justify-center items-center relative">
-        <Image
-          src="/images/mascots/light-blue.svg"
-          alt="Light blue mascot"
-          width={273}
-          height={175}
-          className="absolute top-[-45%] left-[7%]"
-        />
-        <Image
-          src="/images/mascots/green.svg"
-          alt="Green mascot"
-          width={171}
-          height={140}
-          className="absolute top-[-45%] left-[31.5%]"
-        />
-        <Image
-          src="/images/mascots/blue.svg"
-          alt="Blue mascot"
-          width={191}
-          height={150}
-          className="absolute top-[-45%] left-[56%]"
-        />
-        <Image
-          src="/images/mascots/orange.svg"
-          alt="Orange mascot"
-          width={191}
-          height={150}
-          className="absolute top-[-45%] left-[78%]"
-        />
-        <Image
-          src="/images/mascots/beige.svg"
-          alt="Beige mascot"
-          width={109}
-          height={136}
-          className="absolute top-[62%] left-[7%]"
-        />
-        <Image
-          src={
-            isDarkMode
-              ? "/images/mascots/yellow-darkmode.svg"
-              : "/images/mascots/yellow.svg"
-          }
-          alt="Yellow mascot"
-          width={184}
-          height={179}
-          className="absolute top-[110%] left-[18%]"
-        />
-        <Image
-          src={
-            isDarkMode
-              ? "/images/mascots/purple-darkmode.svg"
-              : "/images/mascots/purple.svg"
-          }
-          alt="Purple mascot"
-          width={167}
-          height={140}
-          className="absolute top-[140%] left-[43%]"
-        />
-        <Image
-          src={
-            isDarkMode
-              ? "/images/mascots/grey-darkmode.svg"
-              : "/images/mascots/grey.svg"
-          }
-          alt="Gray mascot"
-          width={97}
-          height={98}
-          className="absolute top-[140%] left-[67%]"
-        />
-        <Image
-          src="/images/mascots/pink.svg"
-          alt="Pink mascot"
-          width={129}
-          height={123}
-          className="absolute top-[57%] left-[86%]"
-        />
+        {!isMobile && (
+          <>
+            <Image
+              src="/images/mascots/light-blue.svg"
+              alt="Light blue mascot"
+              width={273}
+              height={175}
+              className="absolute top-[-45%] left-[7%]"
+            />
+            <Image
+              src="/images/mascots/green.svg"
+              alt="Green mascot"
+              width={171}
+              height={140}
+              className="absolute top-[-45%] left-[31.5%]"
+            />
+            <Image
+              src="/images/mascots/blue.svg"
+              alt="Blue mascot"
+              width={191}
+              height={150}
+              className="absolute top-[-45%] left-[56%]"
+            />
+            <Image
+              src="/images/mascots/orange.svg"
+              alt="Orange mascot"
+              width={191}
+              height={150}
+              className="absolute top-[-45%] left-[78%]"
+            />
+            <Image
+              src="/images/mascots/beige.svg"
+              alt="Beige mascot"
+              width={109}
+              height={136}
+              className="absolute top-[62%] left-[7%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/yellow-darkmode.svg"
+                  : "/images/mascots/yellow.svg"
+              }
+              alt="Yellow mascot"
+              width={184}
+              height={179}
+              className="absolute top-[110%] left-[18%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/purple-darkmode.svg"
+                  : "/images/mascots/purple.svg"
+              }
+              alt="Purple mascot"
+              width={167}
+              height={140}
+              className="absolute top-[140%] left-[43%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/grey-darkmode.svg"
+                  : "/images/mascots/grey.svg"
+              }
+              alt="Gray mascot"
+              width={97}
+              height={98}
+              className="absolute top-[140%] left-[67%]"
+            />
+            <Image
+              src="/images/mascots/pink.svg"
+              alt="Pink mascot"
+              width={129}
+              height={123}
+              className="absolute top-[57%] left-[86%]"
+            />
+          </>
+        )}
 
         <div ref={triggerRef}>
           <Image
