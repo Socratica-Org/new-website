@@ -461,7 +461,7 @@ export default function Home() {
             </p>
           </div>
           <h1
-            className={`font-tiempos text-6xl text-center leading-[1] tracking-[-2.5px] ${isDarkMode ? "text-white" : ""}`}
+            className={`font-tiempos text-5xl md:text-6xl text-center leading-[1]tracking-[-1px]  md:tracking-[-2.5px] ${isDarkMode ? "text-white" : ""}`}
           >
             Independently-run nodes around the{" "}
             <span>
@@ -471,9 +471,9 @@ export default function Home() {
             own.
           </h1>
         </div>
-        <div className="flex flex-row mx-auto justify-center gap-[10%] py-[50px]">
+        <div className="flex flex-col md:flex-row mx-auto justify-center gap-[10%] py-[50px]">
           <p
-            className={`${isDarkMode ? "text-white" : ""} font-inter-variable leading-tight`}
+            className={`${isDarkMode ? "text-white" : ""} font-inter-variable leading-tight text-center md:text-left`}
           >
             <span className="text-[#A09D98]">
               We’re based in Waterloo, but{" "}
@@ -492,7 +492,7 @@ export default function Home() {
             Socratica Lattice.
           </p>
           <a
-            className={`font-dm-mono flex flex-row self-center gap-[8px] uppercase border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px] ${isDarkMode ? "text-white" : ""}`}
+            className={`mt-4 md:mt-0 font-dm-mono flex flex-row self-center gap-[8px] uppercase border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px] ${isDarkMode ? "text-white" : ""}`}
           >
             <Image
               src={isDarkMode ? "/images/white-globe.svg" : "/images/globe.svg"}
