@@ -181,7 +181,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="mt-16 flex flex-row">
+      {!isMobile && <div className="mt-16 flex flex-row">
         <div className="w-1/2">
           <Image
             src="/images/symposium-w24.svg"
@@ -221,8 +221,38 @@ export default function Home() {
           </div>
         </div>
       </div>
+}
 
-      <div className="my-52 mb-96 flex flex-col justify-center items-center relative">
+      {isMobile &&
+        <div className="flex flex-col mt-8">
+          <Image
+            src="/images/symposium-w24.svg"
+            alt="Symposium Winter 2024"
+            width={670}
+            height={670}
+          />
+          <div className="flex flex-row space-x-4 mt-4">
+            <div className="w-1/2">
+              <Image
+                src="/images/socratica-s24.svg"
+                alt="Socratica Summer 2024"
+                width={325}
+                height={478}
+              />
+            </div>
+            <div className="w-1/2">
+              <Image
+                src="/images/kickoff-f23.svg"
+                alt="Kickoff Fall 2023"
+                width={325}
+                height={478}
+              />
+            </div>
+          </div>
+        </div>
+      }
+
+      <div className="my-24 mb-48 md:my-52 md:mb-96 flex flex-col justify-center items-center relative">
         {!isMobile && (
           <>
             <Image
@@ -303,6 +333,94 @@ export default function Home() {
           </>
         )}
 
+        {isMobile && (
+          <>
+            <Image
+              src="/images/mascots/light-blue.svg"
+              alt="Light blue mascot"
+              width={100}
+              height={82}
+              className="absolute top-[5%] left-[0%]"
+            />
+            <Image
+              src="/images/mascots/green.svg"
+              alt="Green mascot"
+              width={100}
+              height={82}
+              className="absolute top-[-20%] left-[20%]"
+            />
+            <Image
+              src="/images/mascots/blue.svg"
+              alt="Blue mascot"
+              width={100}
+              height={82}
+              className="absolute top-[-7%] left-[60%]"
+            />
+            <Image
+              src="/images/mascots/orange.svg"
+              alt="Orange mascot"
+              width={90}
+              height={75}
+              className="absolute top-[0%] left-[82%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/beige-darkmode.svg"
+                  : "/images/mascots/beige.svg"
+              }
+              alt="Beige mascot"
+              width={80}
+              height={65}
+              className="absolute top-[90%] left-[0%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/yellow-darkmode.svg"
+                  : "/images/mascots/yellow.svg"
+              }
+              alt="Yellow mascot"
+              width={120}
+              height={115}
+              className="absolute top-[110%] left-[18%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/purple-darkmode.svg"
+                  : "/images/mascots/purple.svg"
+              }
+              alt="Purple mascot"
+              width={90}
+              height={81}
+              className="absolute top-[100%] left-[50%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/grey-darkmode.svg"
+                  : "/images/mascots/grey.svg"
+              }
+              alt="Gray mascot"
+              width={80}
+              height={78}
+              className="absolute top-[130%] left-[67%]"
+            />
+            <Image
+              src={
+                isDarkMode
+                  ? "/images/mascots/pink-darkmode.svg"
+                  : "/images/mascots/pink.svg"
+              }
+              alt="Pink mascot"
+              width={95}
+              height={92}
+              className="absolute top-[90%] left-[80%]"
+            />
+          </>
+        )}
+
         <div ref={triggerRef}>
           <Image
             ref={logoRef}
@@ -314,8 +432,8 @@ export default function Home() {
           />
         </div>
 
-        <div className="mt-20 w-3/5 text-center">
-          <p className="font-tiempos text-5xl">
+        <div className="mt-10 md:mt-20 w-full md:w-3/5 text-center">
+          <p className="font-tiempos text-4xl">
             We host co-working sessions for you to get started on that{" "}
             <i>thing</i> you&apos;ve been meaning to do.
           </p>
