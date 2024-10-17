@@ -195,7 +195,7 @@ export default function Home() {
             />
           </div>
           <div className="w-1/2 flex flex-col">
-            <div className="flex flex-row pl-4 space-x-4">
+            <div className="flex flex-row pl-2 space-x-4">
               <div className="w-1/2">
                 <Image
                   src="/images/socratica-s24.svg"

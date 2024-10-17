@@ -29,7 +29,7 @@ export default function TopBar({
   return (
     <>
       <div
-        className={`fixed top-0 left-0 right-0 flex justify-between items-center mt-12 px-4 z-10 ${textColor}`}
+        className={`fixed top-0 left-0 right-0 flex justify-between items-center mt-12 px-4 md:px-10 z-10 ${textColor}`}
       >
         <div className="flex space-x-2">
           <a
