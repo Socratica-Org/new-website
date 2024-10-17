@@ -66,8 +66,8 @@ const MapPageContent = () => {
     }
 
     map.current?.on("load", () => {
-      map.current?.setPaintProperty("land", "background-color", "#c6cca5"); // Beige land
-      map.current?.setPaintProperty("water", "fill-color", "#93d1e6"); // Beige water
+      // map.current?.setPaintProperty("land", "background-color", "#c6cca5"); // Beige land
+      // map.current?.setPaintProperty("water", "fill-color", "#93d1e6"); // Beige water
       // map.current?.setPaintProperty('road', 'line-color', 'rgba(222, 184, 135, 1)'); // Beige roads
 
       // Add markers
