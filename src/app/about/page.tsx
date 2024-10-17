@@ -16,13 +16,13 @@ export default function AboutPage() {
 
       {/* QUOTES BLOCKS - should probably turn the blocks into a component*/}
       <div className="grid grid-cols-4 min-w-full mt-[70px] mb-[100px]">
-        <div className="col-span-2">
+        <div className="col-span-4 sm:col-span-3 md:col-span-2">
           <div className="flex flex-row mb-[30px]">
-            <h1 className="font-tiempos text-5xl leading-none tracking-[-2px]">
-              Kind Words from <br></br>our Community{" "}
+            <h1 className="font-tiempos text-3xl sm:text-5xl leading-none tracking-[-2px]">
+              Kind Words from <br className=""></br>our Community{" "}
             </h1>
             <Image
-              className="self-end mb-[7px]"
+              className="self-end mb-[7px] w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12"
               src={"/images/logo.svg"}
               alt="logo"
               width={40}
@@ -31,7 +31,7 @@ export default function AboutPage() {
           </div>
 
           <a
-            className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#041010] border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px]  text-white cursor-pointer`}
+            className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#041010] border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px]  text-white cursor-pointer whitespace-nowrap mb-[20px] md:mb-[0px]`}
           >
             <Image
               src={
@@ -47,14 +47,14 @@ export default function AboutPage() {
           </a>
         </div>
 
-        <div className="h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-2">
+        <div className="h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-2">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
             width={40}
             height={40}
           />
-          <h1 className="text-[#131313]">
+          <h1 className="text-[#131313] text-[10px] sm:text-[12px] md:text-md">
             “There are actually THOUSANDS of people who have been
             &apos;caught&apos; by the extended Socratica network when feeling
             deeply lonely, when moving to new cities, and when going through
@@ -79,7 +79,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="bg-[#ffffff] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between">
+        <div className="bg-[#ffffff] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-1">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -100,13 +100,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Boston
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#649AEA] h-[300px] p-[30px] flex flex-col justify-between col-span-3">
+        <div className="bg-[#649AEA] h-[300px] p-[30px] flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-3">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -114,11 +114,11 @@ export default function AboutPage() {
             height={40}
           />
           <div className="flex flex-row items-center">
-            <h1 className="text-[#FBEFEF] font-tiempos text-4xl leading-none tracking-[-1px]">
+            <h1 className="text-[#FBEFEF] font-tiempos text-xl sm:text-2xl md:text-4xl leading-none tracking-[-1px] col-span-4 sm:col-span-4 sm:col-span-1">
               “the greatest student event <br></br>I’ve ever seen”
             </h1>
             <Image
-              className="mx-auto"
+              className="mx-auto w-14 h-14 sm:w-48 sm:h-48 sm:w-48 sm:h-48"
               src={"/images/mascots/light-blue.svg"}
               alt="mascot"
               width={200}
@@ -142,7 +142,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between">
+        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -164,13 +164,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Waterloo
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#FF6D24] h-[300px] p-[30px]  flex flex-col justify-between">
+        <div className="bg-[#FF6D24] h-[300px] p-[30px]  flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -184,7 +184,7 @@ export default function AboutPage() {
             width={60}
             height={60}
           />
-          <h1 className="text-[#FFFCF3]">
+          <h1 className="text-[#FFFCF3] text-sm md:text-md">
             we&apos;re in a <span className="font-bold">loving each</span> other
             competition and we&apos;re all{" "}
             <span className="font-bold">winning</span>
@@ -206,7 +206,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-2">
+        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-2">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -216,7 +216,7 @@ export default function AboutPage() {
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
             “literally the{" "}
             <span className="text-[#000000]">
-              best thing since <br></br>sliced bread“
+              best thing since <br className="hidden sm:inline"></br>sliced bread“
             </span>
           </h1>
           <div className="flex flex-row justify-between">
@@ -230,13 +230,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Waterloo
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#554F79] h-[300px] p-[30px]  flex flex-col justify-between col-span-4">
+        <div className="bg-[#554F79] h-[300px] p-[30px]  flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-4">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -250,7 +250,7 @@ export default function AboutPage() {
             width={90}
             height={90}
           />
-          <h1 className="text-[#FBF8EF] font-tiempos text-6xl leading-none tracking-[-1px] text-center">
+          <h1 className="text-[#FBF8EF] font-tiempos text-2xl sm:text-4xl md:text-6xl leading-none tracking-[-1px] text-center">
             “we <span className="text-[#A09D98]"> are so </span>back”
           </h1>
           <div className="flex flex-row justify-between">
@@ -264,13 +264,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#FBF8EF] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Waterloo
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#9C5400] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between">
+        <div className="bg-[#9C5400] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -284,7 +284,7 @@ export default function AboutPage() {
             width={60}
             height={60}
           />
-          <h1 className="text-[#FFFCF3]">
+          <h1 className="text-[#FFFCF3] text-sm md:text-md">
             we&apos;re in a <span className="font-bold">loving each</span> other
             competition and we&apos;re all{" "}
             <span className="font-bold">winning</span>
@@ -300,13 +300,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#FFFCF3] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Waterloo
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between">
+        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -328,13 +328,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Waterloo
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-2">
+        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-2">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -344,7 +344,7 @@ export default function AboutPage() {
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
             “literally the{" "}
             <span className="text-[#000000]">
-              best thing since <br></br>sliced bread&quot;
+              best thing since <br className="hidden sm:inline"></br>sliced bread&quot;
             </span>
           </h1>
           <div className="flex flex-row justify-between">
@@ -358,13 +358,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Waterloo
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between">
+        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -385,13 +385,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Boston
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-3">
+        <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-3">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -399,11 +399,11 @@ export default function AboutPage() {
             height={40}
           />
           <div className="flex flex-row items-center">
-            <h1 className="text-[#131313] font-tiempos text-4xl leading-none tracking-[-1px]">
+            <h1 className="text-[#131313] font-tiempos text-2xl sm:text-3xl md:text-4xl leading-none tracking-[-1px]">
               “the greatest student event<br></br> I’ve ever seen&quot;
             </h1>
             <Image
-              className="mx-auto"
+              className="mx-auto w-12 h-12 sm:w-36 sm:h-36 md:h-48 md:w-48"
               src={"/images/mascots/purple.svg"}
               alt="mascot"
               width={200}
@@ -421,13 +421,13 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#131313] font-[500] tracking-[-1px]">
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
                 Boston
               </p>
             </div>
           </div>
         </div>
-        <div className="bg-[#899248] h-[300px] p-[30px] flex flex-col justify-between col-span-4">
+        <div className="bg-[#899248] h-[300px] p-[30px] flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-4">
           <Image
             src={"/images/quotation.svg"}
             alt="quotation symbol"
@@ -437,12 +437,12 @@ export default function AboutPage() {
 
           <div className="flex flex-row items-center">
             <div className="w-[20%]"></div>
-            <h1 className="text-[#E9EDC9] font-tiempos text-6xl leading-none tracking-[-1px] text-center">
+            <h1 className="text-[#E9EDC9] font-tiempos text-2xl sm:text-4xl md:text-6xl leading-none tracking-[-1px] text-center">
               “<span className="text-[#AAB172]">socratica is</span> the love of
               my life&quot;
             </h1>
             <Image
-              className="mx-auto"
+              className="mx-auto w-12 h-12 sm:w-36 sm:h-36 md:h-36 md:w-36"
               src={"/images/mascots/green.svg"}
               alt="mascot"
               width={200}
@@ -472,12 +472,12 @@ export default function AboutPage() {
       {/* WHO WHAT WHERE WHEN SECTION */}
       <div>
         <h1 className="text-[#131313] font-tiempos text-4xl leading-none tracking-[-1px]">
-          We are multidiscplinary in our crafts, & united by <br></br>our shared
+          We are multidiscplinary in our crafts, & united by <br className="hidden md:inline"></br>our shared
           love for making.
         </h1>
 
         <div className="grid grid-cols-4 gap-3 mt-[50px] mb-[50px]">
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <a
               className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#FBF8EF] border-[2px] border-[#E0D9D4] border-dashed px-[25px] py-[10px] rounded-[95px]  text-[#000000]`}
             >
@@ -494,7 +494,7 @@ export default function AboutPage() {
               coming together under one roof.
             </p>
           </div>
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <a
               className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#FBF8EF] border-[2px] border-[#E0D9D4] border-dashed px-[25px] py-[10px] rounded-[95px]  text-[#000000]`}
             >
@@ -510,7 +510,7 @@ export default function AboutPage() {
               United by the mutual love for learning, making, and creating.
             </p>
           </div>
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <a
               className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#FBF8EF] border-[2px] border-[#E0D9D4] border-dashed px-[25px] py-[10px] rounded-[95px]  text-[#000000]`}
             >
@@ -527,7 +527,7 @@ export default function AboutPage() {
               by others doing their own thing, too.
             </p>
           </div>
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <a
               className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#FBF8EF] border-[2px] border-[#E0D9D4] border-dashed px-[25px] py-[10px] rounded-[95px]  text-[#000000]`}
             >
@@ -553,7 +553,7 @@ export default function AboutPage() {
       <div className="relative w-full my-[50px]">
         <div className="relative grid grid-cols-4 gap-4 h-fit w-full">
           {/* First Row */}
-          <div className="relative col-span-2 h-[300px]">
+          <div className="relative col-span-4 sm:col-span-2 h-[300px]">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/group-photo.png"
@@ -561,7 +561,7 @@ export default function AboutPage() {
               layout="fill"
             />
           </div>
-          <div className="relative h-[300px]">
+          <div className="relative h-[300px] col-span-2 sm:col-span-1">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/session.png"
@@ -569,7 +569,7 @@ export default function AboutPage() {
               layout="fill"
             />
           </div>
-          <div className="relative h-[300px]">
+          <div className="relative h-[300px] col-span-2 sm:col-span-1">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/socratica-screen.png"
@@ -579,7 +579,7 @@ export default function AboutPage() {
           </div>
 
           {/* Second Row */}
-          <div className="relative col-span-2 h-[300px]">
+          <div className="relative col-span-4 sm:col-span-2 h-[300px]">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/chantelle.png"
@@ -587,7 +587,7 @@ export default function AboutPage() {
               layout="fill"
             />
           </div>
-          <div className="relative col-span-2 h-[300px]">
+          <div className="relative col-span-4 sm:col-span-2 h-[300px]">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/brian-robot.png"
@@ -597,7 +597,7 @@ export default function AboutPage() {
           </div>
 
           {/* Third Row */}
-          <div className="relative h-[300px]">
+          <div className="relative col-span-2 sm:col-span-1 h-[300px]">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/gang-on-stage.png"
@@ -605,7 +605,7 @@ export default function AboutPage() {
               layout="fill"
             />
           </div>
-          <div className="relative h-[300px]">
+          <div className="relative col-span-2 sm:col-span-1 h-[300px]">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/inayah.png"
@@ -613,7 +613,7 @@ export default function AboutPage() {
               layout="fill"
             />
           </div>
-          <div className="relative col-span-2 h-[300px]">
+          <div className="relative col-span-4 sm:col-span-2 h-[300px]">
             <Image
               className="rounded-[20px] object-cover"
               src="/images/wall-of-love/kickoff-gang.png"
@@ -632,7 +632,7 @@ export default function AboutPage() {
               height={150}
             />
           </div>
-          <div className="absolute top-[50%] left-[45%] rotate-[2deg] z-20">
+          <div className="absolute  bottom-[10%] left-[20%] md:top-[50%] md:left-[45%] rotate-[2deg] z-20">
             <Image
               className="w-[300px] drop-shadow-lg"
               src="/images/wall-of-love/polaroid2.png"
@@ -641,7 +641,7 @@ export default function AboutPage() {
               height={150}
             />
           </div>
-          <div className="absolute top-[10%] left-[70%] rotate-[-5deg] z-20">
+          <div className="absolute top-[15%] left-[70%] sm:top-[10%] sm:left-[70%] rotate-[-5deg] z-20">
             <Image
               className="w-[300px] drop-shadow-lg"
               src="/images/wall-of-love/polaroid3.png"
@@ -650,7 +650,7 @@ export default function AboutPage() {
               height={150}
             />
           </div>
-          <div className="absolute top-[75%] left-[90%] rotate-[-5deg] z-20">
+          <div className="absolute top-[20%] left-[20%] sm:top-[50%] sm:left-[90%] md:top-[20%] md:left-[20%] lg:top-[75%] lg:left-[90%] rotate-[-5deg] z-20">
             <Image
               className="w-[300px] drop-shadow-lg"
               src="/images/wall-of-love/hand.png"
