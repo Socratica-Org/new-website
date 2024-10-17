@@ -10,6 +10,7 @@ import LatticeCard from "./components/lattice-card";
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLogoFixed, setIsLogoFixed] = useState(false);
+  const [isJoinHovered, setIsJoinHovered] = useState(false);
   const logoRef = useRef(null);
   const triggerRef = useRef(null);
 
@@ -112,7 +113,7 @@ export default function Home() {
           loop
           muted
           className="mt-0 md:mt-4 rounded-2xl"
-          style={{ objectFit: "cover", height: "50vh" }}
+          style={{ objectFit: "cover", aspectRatio: "16/9" }}
         />
       </div>
 
@@ -120,27 +121,37 @@ export default function Home() {
         <div>
           <div className="mt-8 flex flex-col md:flex-row">
             <div className="w-full md:w-3/5">
-              <p className="font-tiempos text-4xl md:text-5xl leading-none">
+              <p className="font-tiempos-light text-4xl md:text-5xl">
                 Socratica is an open collective of makers, artists, founders,
                 researchers, designers, and everything <i>in-between</i>.
               </p>
             </div>
-            <div className="w-[15%]" />
+            <div className="w-[12%]" />
             <div className="w-1/4">
-              <p className="text-lg font-inter-variable tracking-tight leading-none">
+              <p className="text-lg font-inter-variable tracking-tight">
                 We are multidisciplinary in our crafts, and a safe space for our
                 shared love of making things*.
               </p>
-              <p className="mt-10 text-lg text-soft-grey">
+              <p className="mt-8 text-lg text-soft-grey">
                 <i>*whatever your thing may be.</i>
               </p>
             </div>
           </div>
 
           <div className="mt-8 flex">
-            <a className="bg-black text-white rounded-full flex items-center px-6 py-3 uppercase font-dm-mono">
+            <a 
+              href="https://lu.ma/socratica"
+              target="_blank"
+              className="bg-black text-white rounded-full flex items-center px-6 py-3 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out uppercase font-dm-mono"
+              onMouseEnter={() => setIsJoinHovered(true)}
+              onMouseLeave={() => setIsJoinHovered(false)}
+            >
               <Image
-                src="/images/right-arrow.svg"
+                src={
+                  isJoinHovered
+                    ? "images/black-right-arrow.svg"
+                    : "images/right-arrow.svg"
+                }
                 alt="Right Arrow"
                 width={12}
                 height={12}

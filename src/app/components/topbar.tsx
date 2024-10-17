@@ -8,6 +8,7 @@ export default function TopBar({
   isDarkMode: boolean;
   isHeaderVisible: boolean;
 }) {
+  const [isJoinHovered, setIsJoinHovered] = useState(false);
   const [isAtTop, setIsAtTop] = useState(true);
 
   useEffect(() => {
@@ -71,7 +72,7 @@ export default function TopBar({
           <a
             href="https://donate.stripe.com/5kA6qZcondXE8Te008"
             target="_blank"
-            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 flex items-center`}
+            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-beige transition-colors duration-500 ease-in-out flex items-center`}
           >
             <Image
               src={
@@ -89,11 +90,13 @@ export default function TopBar({
           <a
             href="https://lu.ma/socratica"
             target="_blank"
-            className={`font-dm-mono ${isDarkMode ? "bg-white text-black" : "bg-black text-white"} border ${borderColor} border-b-2 rounded-full px-4 py-2 flex items-center`}
+            className={`font-dm-mono ${isDarkMode ? "bg-white text-black" : "bg-black text-white"} border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out flex items-center`}
+            onMouseEnter={() => setIsJoinHovered(true)}
+            onMouseLeave={() => setIsJoinHovered(false)}
           >
             <Image
               src={
-                isDarkMode
+                isDarkMode || isJoinHovered
                   ? "images/black-right-arrow.svg"
                   : "images/right-arrow.svg"
               }

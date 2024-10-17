@@ -15,6 +15,8 @@ const config: Config = {
         pink: "#F4B1CB",
         yellow: "#E9B34A",
         "off-black": "#131313",
+        "beige": "#CDC19F",
+        "grey": "#B8C0BE"
       },
       colors: {
         "soft-grey": "#A09D98",
