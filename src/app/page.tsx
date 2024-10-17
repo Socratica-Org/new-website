@@ -24,14 +24,14 @@ export default function Home() {
           Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         const visiblePercentage = (visibleHeight / viewportHeight) * 100;
 
-        setIsDarkMode(visiblePercentage >= 50);
+        setIsDarkMode(visiblePercentage >= 48);
       }
 
       if (logoRef.current && triggerRef.current) {
         const triggerRect = (
           triggerRef.current as HTMLElement
         ).getBoundingClientRect();
-        setIsLogoFixed(triggerRect.top <= 0);
+        setIsLogoFixed(triggerRect.top <= 50);
       }
     };
 
@@ -139,7 +139,7 @@ export default function Home() {
           </div>
 
           <div className="mt-8 flex">
-            <a 
+            <a
               href="https://lu.ma/socratica"
               target="_blank"
               className="bg-black text-white rounded-full flex items-center px-6 py-3 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out uppercase font-dm-mono"
@@ -443,7 +443,11 @@ export default function Home() {
             alt="Asterism"
             width={42}
             height={42}
-            className={`transition-all duration-300 ${isLogoFixed ? "fixed top-12 left-1/2 transform -translate-x-1/2 z-50" : ""}`}
+            className={`transition-transform duration-500 ease-in-out ${
+              isLogoFixed
+                ? "fixed top-12 left-1/2 transform -translate-x-1/2 z-50"
+                : "absolute top-0 left-1/2 transform -translate-x-1/2"
+            }`}
           />
         </div>
 

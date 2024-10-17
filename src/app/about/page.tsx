@@ -216,7 +216,8 @@ export default function AboutPage() {
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
             “literally the{" "}
             <span className="text-[#000000]">
-              best thing since <br className="hidden sm:inline"></br>sliced bread“
+              best thing since <br className="hidden sm:inline"></br>sliced
+              bread“
             </span>
           </h1>
           <div className="flex flex-row justify-between">
@@ -344,7 +345,8 @@ export default function AboutPage() {
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
             “literally the{" "}
             <span className="text-[#000000]">
-              best thing since <br className="hidden sm:inline"></br>sliced bread&quot;
+              best thing since <br className="hidden sm:inline"></br>sliced
+              bread&quot;
             </span>
           </h1>
           <div className="flex flex-row justify-between">
@@ -472,8 +474,8 @@ export default function AboutPage() {
       {/* WHO WHAT WHERE WHEN SECTION */}
       <div>
         <h1 className="text-[#131313] font-tiempos text-4xl leading-none tracking-[-1px]">
-          We are multidiscplinary in our crafts, & united by <br className="hidden md:inline"></br>our shared
-          love for making.
+          We are multidiscplinary in our crafts, & united by{" "}
+          <br className="hidden md:inline"></br>our shared love for making.
         </h1>
 
         <div className="grid grid-cols-4 gap-3 mt-[50px] mb-[50px]">
