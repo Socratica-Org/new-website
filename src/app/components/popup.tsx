@@ -29,7 +29,7 @@ export default function Popup({
 }) {
   return (
     <div
-      className="fixed top-[65%] md:top-1/2 transform -translate-y-1/2 z-50 bg-primary p-4 rounded-xl shadow-lg w-[90%] h-[80%] md:w-[450px] md:h-[760px] right-5 md:right-5 md:translate-x-0"
+      className="fixed top-[62.5%] md:top-1/2 transform -translate-y-1/2 z-50 bg-primary p-4 rounded-xl shadow-lg w-[90%] h-[80%] md:w-[450px] md:h-[760px] right-5 md:right-5 md:translate-x-0"
       style={overlayStyle}
     >
       <button onClick={onClose} className="absolute top-5 right-5 text-white">
