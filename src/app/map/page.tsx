@@ -31,9 +31,9 @@ const MapPageContent = () => {
   );
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
-  const [lng, setLng] = useState(-62.146388);
-  const [lat, setLat] = useState(51.557152);
-  const [zoom, setZoom] = useState(3);
+  const [lng, setLng] = useState(isMobile ? -95.485624 : -62.146388);
+  const [lat, setLat] = useState(isMobile ? 49.010826 : 51.557152);
+  const [zoom, setZoom] = useState(isMobile ? 2 : 3);
 
   useEffect(() => {
     const locationId = searchParams.get("location");

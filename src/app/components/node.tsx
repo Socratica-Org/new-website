@@ -112,7 +112,7 @@ export default function Node({
         <iframe
           title={name}
           src={lumaLink}
-          className="w-[95%] md:w-[400px] h-[475px] md:h-[500px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#A09D98]"
+          className="w-[95%] md:w-[400px] h-[450px] md:h-[500px] rounded-lg mb-5 bg-[#F4F5F6] border-2 border-[#A09D98]"
           style={{ margin: "0 auto" }}
           aria-hidden="false"
         />
