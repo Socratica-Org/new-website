@@ -12,7 +12,7 @@ const overlayStyle = {
   transform: "translateX(0)",
   zIndex: 1000,
   position: "absolute" as const,
-  top: "50%",
+  // top: "50%",
   // right: "2.5%",
   // width: "450px",
   // height: "760px",
@@ -29,7 +29,7 @@ export default function Popup({
 }) {
   return (
     <div
-      className="fixed top-1/2 transform -translate-y-1/2 z-50 bg-primary p-4 rounded-xl shadow-lg w-[90%] h-[80%] md:w-[450px] md:h-[760px] right-5 md:right-5 md:translate-x-0"
+      className="fixed top-3/4 md:top-1/2 transform -translate-y-1/2 z-50 bg-primary p-4 rounded-xl shadow-lg w-[90%] h-[80%] md:w-[450px] md:h-[760px] right-5 md:right-5 md:translate-x-0"
       style={overlayStyle}
     >
       <button onClick={onClose} className="absolute top-5 right-5 text-white">
