@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Suspense } from "react";
 import { isMobile } from "react-device-detect";
 import Image from "next/image";
 import Topbar from "./components/topbar";
@@ -107,14 +107,21 @@ export default function Home() {
       <div className="flex flex-col justify-center mt-16 md:mt-8">
         {!isMobile && <DoodleSwitcher />}
         {/* <DoodleSwitcher /> */}
-        <video
-          src="/landing-video.mov"
-          autoPlay
-          loop
-          muted
-          className="mt-0 md:mt-4 rounded-2xl"
-          style={{ objectFit: "cover", aspectRatio: "16/9" }}
-        />
+        <Suspense fallback={"Loading video"}>
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            // controls
+            controlsList="nofullscreen"
+            className="mt-0 md:mt-4 rounded-2xl"
+            style={{ objectFit: "cover", aspectRatio: "16/9" }}
+          >
+            <source src="/landing-video.mov" type="video/mp4" />
+            Your broswer does not support the video tag.
+          </video>
+        </Suspense>
       </div>
 
       {!isMobile && (
