@@ -109,6 +109,7 @@ export default function Home() {
         {/* <DoodleSwitcher /> */}
         <Suspense fallback={"Loading video"}>
           <video
+            preload="metadata"
             autoPlay
             loop
             muted
@@ -118,7 +119,8 @@ export default function Home() {
             className="mt-0 md:mt-4 rounded-2xl"
             style={{ objectFit: "cover", aspectRatio: "16/9" }}
           >
-            <source src="/landing-video.mov" type="video/mp4" />
+            {/* <source src="/landing-video.mov" type="video/mp4" /> */}
+            <source src="/landing-video.webm" type="video/webm" />
             Your broswer does not support the video tag.
           </video>
         </Suspense>
