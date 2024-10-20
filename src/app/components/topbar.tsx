@@ -35,19 +35,19 @@ export default function TopBar({
         <div className="flex space-x-2">
           <a
             href="/"
-            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-orange transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-orange transition-colors duration-500 ease-in-out`}
           >
             HOME
           </a>
           <a
             href="/about"
-            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-light-blue transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-light-blue transition-colors duration-500 ease-in-out`}
           >
             ABOUT
           </a>
           <a
             href="/map"
-            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-pink transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-pink transition-colors duration-500 ease-in-out`}
           >
             LATTICE
           </a>
@@ -65,14 +65,14 @@ export default function TopBar({
           <a
             href="https://toolbox.socratica.info"
             target="_blank"
-            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-yellow transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-yellow transition-colors duration-500 ease-in-out`}
           >
             TOOLBOX
           </a>
           <a
             href="https://donate.stripe.com/5kA6qZcondXE8Te008"
             target="_blank"
-            className={`font-dm-mono border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-beige transition-colors duration-500 ease-in-out flex items-center`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-beige transition-colors duration-500 ease-in-out flex items-center`}
           >
             <Image
               src={
@@ -90,7 +90,7 @@ export default function TopBar({
           <a
             href="https://lu.ma/socratica"
             target="_blank"
-            className={`font-dm-mono ${isDarkMode ? "bg-primary text-black" : "bg-black text-white"} border ${borderColor} border-b-2 rounded-full px-4 py-2 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out flex items-center`}
+            className={`font-dm-mono ${isDarkMode ? "bg-primary text-black" : "bg-black text-white"} border ${borderColor} rounded-full px-4 py-2 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out flex items-center`}
             onMouseEnter={() => setIsJoinHovered(true)}
             onMouseLeave={() => setIsJoinHovered(false)}
           >

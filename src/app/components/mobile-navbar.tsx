@@ -67,33 +67,33 @@ export default function MobileNavbar() {
           <div className="absolute top-40 left-3 flex flex-col space-y-4 items-start z-40">
             <a
               href="/"
-              className="font-dm-mono text-white border border-white border-b-2 rounded-full px-4 py-2 hover:bg-orange transition-colors duration-500 ease-in-out"
+              className="font-dm-mono text-white border border-white rounded-full px-4 py-2 hover:bg-orange transition-colors duration-500 ease-in-out"
             >
               HOME
             </a>
             <a
               href="/about"
-              className="font-dm-mono text-white border border-white border-b-2 rounded-full px-4 py-2 hover:bg-light-blue transition-colors duration-500 ease-in-out"
+              className="font-dm-mono text-white border border-white rounded-full px-4 py-2 hover:bg-light-blue transition-colors duration-500 ease-in-out"
             >
               ABOUT
             </a>
             <a
               href="/map"
-              className="font-dm-mono text-white border border-white border-b-2 rounded-full px-4 py-2 hover:bg-pink transition-colors duration-500 ease-in-out"
+              className="font-dm-mono text-white border border-white rounded-full px-4 py-2 hover:bg-pink transition-colors duration-500 ease-in-out"
             >
               LATTICE
             </a>
             <a
               href="https://toolbox.socratica.info"
               target="_blank"
-              className="font-dm-mono text-white border border-white border-b-2 rounded-full px-4 py-2 hover:bg-yellow transition-colors duration-500 ease-in-out"
+              className="font-dm-mono text-white border border-white rounded-full px-4 py-2 hover:bg-yellow transition-colors duration-500 ease-in-out"
             >
               TOOLBOX
             </a>
             <a
               href="https://donate.stripe.com/5kA6qZcondXE8Te008"
               target="_blank"
-              className="font-dm-mono text-white border border-white border-b-2 rounded-full flex px-4 py-2"
+              className="font-dm-mono text-white border border-white rounded-full flex px-4 py-2"
             >
               <Image
                 src="images/right-arrow.svg"
@@ -107,7 +107,7 @@ export default function MobileNavbar() {
             <a
               href="https://lu.ma/socratica"
               target="_blank"
-              className="font-dm-mono text-white border border-white border-b-2 rounded-full flex px-4 py-2"
+              className="font-dm-mono text-white border border-white rounded-full flex px-4 py-2"
             >
               <Image
                 src="images/right-arrow.svg"
