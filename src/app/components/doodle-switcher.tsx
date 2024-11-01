@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const doodles = [
   {
-    src: "/images/doodles/doodle1.png",
+    src: "/images/doodles/doodle1.svg",
     title: '"Little Guys", by Aileen Luo',
   },
   {

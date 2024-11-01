@@ -11,8 +11,9 @@ export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLogoFixed, setIsLogoFixed] = useState(false);
   const [isJoinHovered, setIsJoinHovered] = useState(false);
-  const logoRef = useRef(null);
-  const triggerRef = useRef(null);
+  
+  const firstAsterismRef = useRef<HTMLDivElement>(null);
+  const secondAsterismRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,18 +25,29 @@ export default function Home() {
           Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         const visiblePercentage = (visibleHeight / viewportHeight) * 100;
 
-        setIsDarkMode(visiblePercentage >= 48);
+        setIsDarkMode(visiblePercentage >= 50);
       }
 
-      if (logoRef.current && triggerRef.current) {
-        const triggerRect = (
-          triggerRef.current as HTMLElement
-        ).getBoundingClientRect();
-        setIsLogoFixed(triggerRect.top <= 50);
+      const firstAsterism = firstAsterismRef.current;
+      const secondAsterism = secondAsterismRef.current;
+
+      if (firstAsterism && secondAsterism) {
+        const firstRect = firstAsterism.getBoundingClientRect();
+        const secondRect = secondAsterism.getBoundingClientRect();
+
+        const hasPassedFirst = firstRect.top <= 50;
+        const hasPassedSecond = secondRect.top <= 50;
+
+        if (hasPassedFirst && !hasPassedSecond) {
+          setIsLogoFixed(true);
+        } else {
+          setIsLogoFixed(false);
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
+    // handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -445,9 +457,8 @@ export default function Home() {
           </>
         )}
 
-        <div ref={triggerRef}>
+        <div ref={firstAsterismRef}>
           <Image
-            ref={logoRef}
             src={isDarkMode ? "/images/white-logo.svg" : "/images/logo.svg"}
             alt="Asterism"
             width={42}
@@ -479,6 +490,7 @@ export default function Home() {
         <div>
           <div className="font-dm-mono text-lg text-center leading-[1] pb-[30px] mx-auto mt-[90px] flex flex-col items-center">
             <Image
+              ref={secondAsterismRef}
               src={isDarkMode ? "/images/white-logo.svg" : "/images/logo.svg"}
               alt="Asterism"
               width={44}
