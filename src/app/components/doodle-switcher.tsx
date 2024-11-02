@@ -9,7 +9,7 @@ const doodles = [
     title: '"Little Guys", by Aileen Luo',
   },
   {
-    src: "/images/doodles/doodle2.png",
+    src: "/images/doodles/doodle2.svg",
     title: '"Project Block"',
   },
   // {
