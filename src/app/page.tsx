@@ -7,12 +7,11 @@ import MobileNavbar from "./components/mobile-navbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 import LatticeCard from "./components/lattice-card";
 
-
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLogoFixed, setIsLogoFixed] = useState(false);
   const [isJoinHovered, setIsJoinHovered] = useState(false);
-  
+
   const firstAsterismRef = useRef<HTMLDivElement>(null);
   const secondAsterismRef = useRef<HTMLImageElement>(null);
 
