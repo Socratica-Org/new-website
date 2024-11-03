@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { isMobile } from "react-device-detect";
 import Image from "next/image";
+import { GetServerSideProps } from "next";
 
 const doodles = [
   {
@@ -12,10 +12,6 @@ const doodles = [
     src: "/images/doodles/doodle2.svg",
     title: '"Project Block"',
   },
-  // {
-  //   src: "images/doodles/doodle3.png",
-  //   title: `"Aileen's Worst Nightmare", by Jake Rudolph`,
-  // },
   {
     src: "/images/doodles/doodle4.png",
     title: '"MS Paint", by HudZah',
@@ -24,10 +20,6 @@ const doodles = [
     src: "/images/doodles/socratica-big.svg",
     title: "Big Socratica Doodle",
   },
-  //   {
-  //     src: "images/doodles/doodle5.png",
-  //     title: '"Socratica Block Letters"',
-  //   }
 ];
 
 const MobileContent = ({ switchDoodle, currentDoodle }: any) => {
@@ -43,7 +35,6 @@ const MobileContent = ({ switchDoodle, currentDoodle }: any) => {
         id="socraticaLogo"
         src={currentDoodle.src}
         alt={currentDoodle.title}
-        // className="h-[80px] w-auto object-contain"
         width={150}
         height={150}
         quality={100}
@@ -72,20 +63,11 @@ const DesktopContent = ({ switchDoodle, currentDoodle }: any) => {
         quality={100}
         priority
       />
-
-      {/* <div className="w-full flex flex-col items-end mt-8 mr-16">
-        <p className="font-mono text-[8px] md:text-sm text-[#706F6B]">
-          CURRENT ART
-        </p>
-        <p className="font-graphik text-right text-[10px] md:text-sm">
-          {currentDoodle.title}
-        </p>
-      </div> */}
     </div>
   );
 };
 
-export default function DoodleSwitcher() {
+export default function DoodleSwitcher({ isMobile }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -114,3 +96,10 @@ export default function DoodleSwitcher() {
     </>
   );
 }
+
+
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const userAgent = req.headers["user-agent"] || "";
+  const isMobile = /mobile/i.test(userAgent);
+  return { props: { isMobile } };
+};
