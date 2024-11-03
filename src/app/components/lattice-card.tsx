@@ -36,7 +36,7 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
           />
         </div>
         <div>
-          <p className="text-sm text-[#FFF] opacity-65 font-medium">
+          <p className="text-sm text-[#FFF] opacity-75 font-medium">
             {nodeCity}
           </p>
           <p className="font-tiempos text-[#ffffff] text-2xl mt-[10px] tracking-[-0.64px] font-light">
