@@ -26,6 +26,7 @@ export default function TopBar({
 
   const borderColor = isDarkMode ? "border-white" : "border-black";
   const textColor = isDarkMode ? "text-white" : "text-black";
+  const backgroundColor = isDarkMode ? "bg-black" : "bg-primary";
 
   return (
     <>
@@ -35,19 +36,19 @@ export default function TopBar({
         <div className="flex space-x-2">
           <a
             href="/"
-            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-orange transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 ${backgroundColor} hover:bg-orange transition-colors duration-500 ease-in-out`}
           >
             HOME
           </a>
           <a
             href="/about"
-            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-light-blue transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 ${backgroundColor} hover:bg-light-blue transition-colors duration-500 ease-in-out`}
           >
             ABOUT
           </a>
           <a
             href="/map"
-            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-pink transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 ${backgroundColor} hover:bg-pink transition-colors duration-500 ease-in-out`}
           >
             LATTICE
           </a>
@@ -65,14 +66,14 @@ export default function TopBar({
           <a
             href="https://toolbox.socratica.info"
             target="_blank"
-            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-yellow transition-colors duration-500 ease-in-out`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 ${backgroundColor} hover:bg-yellow transition-colors duration-500 ease-in-out`}
           >
             TOOLBOX
           </a>
           <a
             href="https://donate.stripe.com/5kA6qZcondXE8Te008"
             target="_blank"
-            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 hover:bg-beige transition-colors duration-500 ease-in-out flex items-center`}
+            className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 ${backgroundColor} hover:bg-beige transition-colors duration-500 ease-in-out flex items-center`}
           >
             <Image
               src={
