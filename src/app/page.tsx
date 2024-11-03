@@ -7,6 +7,7 @@ import MobileNavbar from "./components/mobile-navbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 import LatticeCard from "./components/lattice-card";
 
+
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLogoFixed, setIsLogoFixed] = useState(false);
@@ -92,7 +93,7 @@ export default function Home() {
 
   return (
     <div
-      className={`transition-colors duration-1000 ${
+      className={`transition-colors duration-500 ${
         isDarkMode ? "bg-off-black" : "bg-primary"
       } min-h-screen min-w-full flex flex-col px-4 md:px-10`}
     >
@@ -482,7 +483,7 @@ export default function Home() {
       {/* START: LANDING PAGE LATTICE SECTION */}
       <div
         id="lattice-section"
-        className="h-[fit] bg-[url('../../public/images/left-side-lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]"
+        className="will-change-scroll h-[fit] bg-[url('../../public/images/left-side-lines.svg')] bg-fill bg-center border-t border-t-[1px] border-t-[#A09D98]"
       >
         <p className="text-[#A09D98] mt-[10px] font-dm-mono">
           HERE, THERE, EVERYWHERE
