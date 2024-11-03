@@ -6,6 +6,23 @@ import Topbar from "./components/topbar";
 import MobileNavbar from "./components/mobile-navbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 import LatticeCard from "./components/lattice-card";
+import dynamic from "next/dynamic";
+
+const PlayProvider = dynamic(
+  () => {
+    if (typeof window !== "undefined") {
+      return import("@playhtml/react").then((mod) => mod.PlayProvider);
+    } else {
+      return Promise.resolve(() => <></>);
+    }
+  },
+  { ssr: false },
+);
+
+const CanMoveElement = dynamic(
+  () => import("@playhtml/react").then((mod) => mod.CanMoveElement),
+  { ssr: false },
+);
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -308,174 +325,6 @@ export default function Home() {
       )}
 
       <div className="my-24 mb-48 md:my-52 md:mb-96 flex flex-col justify-center items-center relative">
-        {!isMobile && (
-          <>
-            <Image
-              src="/images/mascots/light-blue.svg"
-              alt="Light blue mascot"
-              width={273}
-              height={175}
-              className="absolute top-[-45%] left-[7%]"
-            />
-            <Image
-              src="/images/mascots/green.svg"
-              alt="Green mascot"
-              width={171}
-              height={140}
-              className="absolute top-[-45%] left-[31.5%]"
-            />
-            <Image
-              src="/images/mascots/blue.svg"
-              alt="Blue mascot"
-              width={191}
-              height={150}
-              className="absolute top-[-45%] left-[56%]"
-            />
-            <Image
-              src="/images/mascots/orange.svg"
-              alt="Orange mascot"
-              width={191}
-              height={150}
-              className="absolute top-[-45%] left-[78%]"
-            />
-            <Image
-              src="/images/mascots/beige.svg"
-              alt="Beige mascot"
-              width={109}
-              height={136}
-              className="absolute top-[62%] left-[7%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/yellow-darkmode.svg"
-                  : "/images/mascots/yellow.svg"
-              }
-              alt="Yellow mascot"
-              width={184}
-              height={179}
-              className="absolute top-[110%] left-[18%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/purple-darkmode.svg"
-                  : "/images/mascots/purple.svg"
-              }
-              alt="Purple mascot"
-              width={167}
-              height={140}
-              className="absolute top-[140%] left-[43%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/grey-darkmode.svg"
-                  : "/images/mascots/grey.svg"
-              }
-              alt="Gray mascot"
-              width={97}
-              height={98}
-              className="absolute top-[140%] left-[67%]"
-            />
-            <Image
-              src="/images/mascots/pink.svg"
-              alt="Pink mascot"
-              width={129}
-              height={123}
-              className="absolute top-[57%] left-[86%]"
-            />
-          </>
-        )}
-
-        {isMobile && (
-          <>
-            <Image
-              src="/images/mascots/light-blue.svg"
-              alt="Light blue mascot"
-              width={100}
-              height={82}
-              className="absolute top-[5%] left-[0%]"
-            />
-            <Image
-              src="/images/mascots/green.svg"
-              alt="Green mascot"
-              width={100}
-              height={82}
-              className="absolute top-[-20%] left-[20%]"
-            />
-            <Image
-              src="/images/mascots/blue.svg"
-              alt="Blue mascot"
-              width={100}
-              height={82}
-              className="absolute top-[-7%] left-[60%]"
-            />
-            <Image
-              src="/images/mascots/orange.svg"
-              alt="Orange mascot"
-              width={90}
-              height={75}
-              className="absolute top-[0%] left-[82%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/beige-darkmode.svg"
-                  : "/images/mascots/beige.svg"
-              }
-              alt="Beige mascot"
-              width={80}
-              height={65}
-              className="absolute top-[90%] left-[0%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/yellow-darkmode.svg"
-                  : "/images/mascots/yellow.svg"
-              }
-              alt="Yellow mascot"
-              width={120}
-              height={115}
-              className="absolute top-[110%] left-[18%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/purple-darkmode.svg"
-                  : "/images/mascots/purple.svg"
-              }
-              alt="Purple mascot"
-              width={90}
-              height={81}
-              className="absolute top-[100%] left-[50%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/grey-darkmode.svg"
-                  : "/images/mascots/grey.svg"
-              }
-              alt="Gray mascot"
-              width={80}
-              height={78}
-              className="absolute top-[130%] left-[67%]"
-            />
-            <Image
-              src={
-                isDarkMode
-                  ? "/images/mascots/pink-darkmode.svg"
-                  : "/images/mascots/pink.svg"
-              }
-              alt="Pink mascot"
-              width={95}
-              height={92}
-              className="absolute top-[90%] left-[80%]"
-            />
-          </>
-        )}
-
         <div ref={firstAsterismRef}>
           <Image
             src={isDarkMode ? "/images/white-logo.svg" : "/images/logo.svg"}
@@ -495,6 +344,166 @@ export default function Home() {
             We host co-working sessions for you to get started on that{" "}
             <i>thing</i> you&apos;ve been meaning to do.
           </p>
+        </div>
+
+        <div className="flex flex-row">
+          <PlayProvider>
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 90 : 246,
+                  height: isMobile ? 73.8 : 157.5,
+                }}
+              >
+                <Image
+                  src="/images/mascots/light-blue.svg"
+                  alt="Light blue mascot"
+                  width={isMobile ? 90 : 246}
+                  height={isMobile ? 73.8 : 157.5}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 90 : 153.9,
+                  height: isMobile ? 73.8 : 126,
+                }}
+              >
+                <Image
+                  src="/images/mascots/green.svg"
+                  alt="Green mascot"
+                  width={isMobile ? 90 : 153.9}
+                  height={isMobile ? 73.8 : 126}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 90 : 171.9,
+                  height: isMobile ? 73.8 : 135,
+                }}
+              >
+                <Image
+                  src="/images/mascots/blue.svg"
+                  alt="Blue mascot"
+                  width={isMobile ? 90 : 171.9}
+                  height={isMobile ? 73.8 : 135}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 81 : 171.9,
+                  height: isMobile ? 67.5 : 135,
+                }}
+              >
+                <Image
+                  src="/images/mascots/orange.svg"
+                  alt="Orange mascot"
+                  width={isMobile ? 81 : 171.9}
+                  height={isMobile ? 67.5 : 135}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 72 : 98.1,
+                  height: isMobile ? 58.5 : 122.4,
+                }}
+              >
+                <Image
+                  src="/images/mascots/beige.svg"
+                  alt="Beige mascot"
+                  width={isMobile ? 72 : 98.1}
+                  height={isMobile ? 58.5 : 122.4}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 108 : 165.6,
+                  height: isMobile ? 103.5 : 161.1,
+                }}
+              >
+                <Image
+                  src={
+                    isDarkMode
+                      ? "/images/mascots/yellow-darkmode.svg"
+                      : "/images/mascots/yellow.svg"
+                  }
+                  alt="Yellow mascot"
+                  width={isMobile ? 108 : 165.6}
+                  height={isMobile ? 103.5 : 161.1}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 81 : 150.3,
+                  height: isMobile ? 72.9 : 126,
+                }}
+              >
+                <Image
+                  src={
+                    isDarkMode
+                      ? "/images/mascots/purple-darkmode.svg"
+                      : "/images/mascots/purple.svg"
+                  }
+                  alt="Purple mascot"
+                  width={isMobile ? 81 : 150.3}
+                  height={isMobile ? 72.9 : 126}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 72 : 87.3,
+                  height: isMobile ? 70.2 : 88.2,
+                }}
+              >
+                <Image
+                  src={
+                    isDarkMode
+                      ? "/images/mascots/grey-darkmode.svg"
+                      : "/images/mascots/grey.svg"
+                  }
+                  alt="Gray mascot"
+                  width={isMobile ? 72 : 87.3}
+                  height={isMobile ? 70.2 : 88.2}
+                />
+              </div>
+            </CanMoveElement>
+
+            <CanMoveElement>
+              <div
+                style={{
+                  width: isMobile ? 85.5 : 116.1,
+                  height: isMobile ? 82.8 : 110.7,
+                }}
+              >
+                <Image
+                  src="/images/mascots/pink.svg"
+                  alt="Pink mascot"
+                  width={isMobile ? 85.5 : 116.1}
+                  height={isMobile ? 82.8 : 110.7}
+                />
+              </div>
+            </CanMoveElement>
+          </PlayProvider>
         </div>
       </div>
 
@@ -583,6 +592,20 @@ export default function Home() {
         </div>
       </div>
       {/* END: LANDING PAGE LATTICE SECTION */}
+
+      {/* <PlayProvider>
+        <CanMoveElement>
+          <div>
+            <Image
+              src="/images/mascots/light-blue.svg"
+              alt="Light blue mascot"
+              width={273}
+              height={175}
+              // className="absolute top-[-45%] left-[7%]"
+            />
+          </div>
+        </CanMoveElement>
+      </PlayProvider> */}
     </div>
   );
 }
