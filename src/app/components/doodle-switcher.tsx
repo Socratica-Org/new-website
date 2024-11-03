@@ -97,7 +97,6 @@ export default function DoodleSwitcher({ isMobile }: any) {
   );
 }
 
-
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const userAgent = req.headers["user-agent"] || "";
   const isMobile = /mobile/i.test(userAgent);
