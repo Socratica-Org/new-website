@@ -6,23 +6,7 @@ import Topbar from "./components/topbar";
 import MobileNavbar from "./components/mobile-navbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 import LatticeCard from "./components/lattice-card";
-import dynamic from "next/dynamic";
-
-const PlayProvider = dynamic(
-  () => {
-    if (typeof window !== "undefined") {
-      return import("@playhtml/react").then((mod) => mod.PlayProvider);
-    } else {
-      return Promise.resolve(() => <></>);
-    }
-  },
-  { ssr: false },
-);
-
-const CanMoveElement = dynamic(
-  () => import("@playhtml/react").then((mod) => mod.CanMoveElement),
-  { ssr: false },
-);
+import Mascots from "./components/mascots";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -122,19 +106,7 @@ export default function Home() {
       {!isMobile && <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />}
       {isMobile && (
         <div className="flex justify-between items-center py-4">
-          {/* <Image
-            src="images/doodles/socratica-big.svg"
-            alt="Socratica"
-            width={150}
-            height={150}
-          /> */}
           {isMobile && <DoodleSwitcher />}
-          {/* <Image
-            src="images/logo.svg"
-            alt="Asterism"
-            width={36}
-            height={36}
-          /> */}
           <MobileNavbar />
         </div>
       )}
@@ -330,7 +302,7 @@ export default function Home() {
         </div>
       )}
 
-      <div className="my-24 mb-48 md:my-52 md:mb-96 flex flex-col justify-center items-center relative">
+      <div className="my-24 mb-48 md:my-52 md:mb-64 flex flex-col justify-center items-center relative">
         <div ref={firstAsterismRef}>
           <Image
             src={isDarkMode ? "/images/white-logo.svg" : "/images/logo.svg"}
@@ -352,165 +324,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-row">
-          <PlayProvider>
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 90 : 246,
-                  height: isMobile ? 73.8 : 157.5,
-                }}
-              >
-                <Image
-                  src="/images/mascots/light-blue.svg"
-                  alt="Light blue mascot"
-                  width={isMobile ? 90 : 246}
-                  height={isMobile ? 73.8 : 157.5}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 90 : 153.9,
-                  height: isMobile ? 73.8 : 126,
-                }}
-              >
-                <Image
-                  src="/images/mascots/green.svg"
-                  alt="Green mascot"
-                  width={isMobile ? 90 : 153.9}
-                  height={isMobile ? 73.8 : 126}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 90 : 171.9,
-                  height: isMobile ? 73.8 : 135,
-                }}
-              >
-                <Image
-                  src="/images/mascots/blue.svg"
-                  alt="Blue mascot"
-                  width={isMobile ? 90 : 171.9}
-                  height={isMobile ? 73.8 : 135}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 81 : 171.9,
-                  height: isMobile ? 67.5 : 135,
-                }}
-              >
-                <Image
-                  src="/images/mascots/orange.svg"
-                  alt="Orange mascot"
-                  width={isMobile ? 81 : 171.9}
-                  height={isMobile ? 67.5 : 135}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 72 : 98.1,
-                  height: isMobile ? 58.5 : 122.4,
-                }}
-              >
-                <Image
-                  src="/images/mascots/beige.svg"
-                  alt="Beige mascot"
-                  width={isMobile ? 72 : 98.1}
-                  height={isMobile ? 58.5 : 122.4}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 108 : 165.6,
-                  height: isMobile ? 103.5 : 161.1,
-                }}
-              >
-                <Image
-                  src={
-                    isDarkMode
-                      ? "/images/mascots/yellow-darkmode.svg"
-                      : "/images/mascots/yellow.svg"
-                  }
-                  alt="Yellow mascot"
-                  width={isMobile ? 108 : 165.6}
-                  height={isMobile ? 103.5 : 161.1}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 81 : 150.3,
-                  height: isMobile ? 72.9 : 126,
-                }}
-              >
-                <Image
-                  src={
-                    isDarkMode
-                      ? "/images/mascots/purple-darkmode.svg"
-                      : "/images/mascots/purple.svg"
-                  }
-                  alt="Purple mascot"
-                  width={isMobile ? 81 : 150.3}
-                  height={isMobile ? 72.9 : 126}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 72 : 87.3,
-                  height: isMobile ? 70.2 : 88.2,
-                }}
-              >
-                <Image
-                  src={
-                    isDarkMode
-                      ? "/images/mascots/grey-darkmode.svg"
-                      : "/images/mascots/grey.svg"
-                  }
-                  alt="Gray mascot"
-                  width={isMobile ? 72 : 87.3}
-                  height={isMobile ? 70.2 : 88.2}
-                />
-              </div>
-            </CanMoveElement>
-
-            <CanMoveElement>
-              <div
-                style={{
-                  width: isMobile ? 85.5 : 116.1,
-                  height: isMobile ? 82.8 : 110.7,
-                }}
-              >
-                <Image
-                  src="/images/mascots/pink.svg"
-                  alt="Pink mascot"
-                  width={isMobile ? 85.5 : 116.1}
-                  height={isMobile ? 82.8 : 110.7}
-                />
-              </div>
-            </CanMoveElement>
-          </PlayProvider>
-        </div>
+        {/* <div className="flex flex-row">
+        </div> */}
+        <Mascots isDarkMode={isDarkMode} />
       </div>
 
       {/* START: LANDING PAGE LATTICE SECTION */}
