@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { GetServerSideProps } from "next";
+import { isMobile } from "react-device-detect";
 
 const doodles = [
   {
@@ -35,8 +36,8 @@ const MobileContent = ({ switchDoodle, currentDoodle }: any) => {
         id="socraticaLogo"
         src={currentDoodle.src}
         alt={currentDoodle.title}
-        width={150}
-        height={150}
+        width={200}
+        height={200}
         quality={100}
         priority
       />
@@ -67,7 +68,7 @@ const DesktopContent = ({ switchDoodle, currentDoodle }: any) => {
   );
 };
 
-export default function DoodleSwitcher({ isMobile }: any) {
+export default function DoodleSwitcher() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

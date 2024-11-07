@@ -39,11 +39,11 @@ export default function MobileNavbar() {
     <div>
       <div className="absolute top-2 right-2 z-30">
         <button
-          className="w-20 h-10 bg-black rounded-full flex flex-col justify-center items-center"
+          className="w-10 h-10 bg-black rounded-full flex flex-col justify-center items-center"
           onClick={toggleOverlay}
         >
-          {/* <div className="w-3 h-0.5 bg-white mb-1" />
-          <div className="w-3 h-0.5 bg-white" /> */}
+          <div className="w-3 h-0.5 bg-white mb-1" />
+          <div className="w-3 h-0.5 bg-white" />
         </button>
       </div>
 

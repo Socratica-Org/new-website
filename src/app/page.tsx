@@ -106,7 +106,7 @@ export default function Home() {
       {!isMobile && <Topbar isDarkMode={isDarkMode} isHeaderVisible={true} />}
       {isMobile && (
         <div className="flex justify-between items-center py-4">
-          {isMobile && <DoodleSwitcher />}
+          <DoodleSwitcher />
           <MobileNavbar />
         </div>
       )}
@@ -125,7 +125,10 @@ export default function Home() {
             // controls
             controlsList="nofullscreen"
             className="mt-0 md:mt-4 rounded-2xl"
-            style={{ objectFit: "cover", aspectRatio: "16/9" }}
+            style={{
+              objectFit: "cover",
+              aspectRatio: isMobile ? "7/8" : "16/9",
+            }}
           >
             {/* <source src="/landing-video.mov" type="video/mp4" /> */}
             <source src="/videos/landing-video.webm" type="video/webm" />

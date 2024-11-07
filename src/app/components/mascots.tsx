@@ -91,7 +91,7 @@ const mobileMascots = [
     alt: "Light blue mascot",
     width: 90,
     height: 73.8,
-    className: "absolute top-[5%] left-[0%]",
+    className: "absolute top-[-8%] left-[0%]",
   },
   {
     srcLight: "/images/mascots/green.svg",
@@ -99,7 +99,7 @@ const mobileMascots = [
     alt: "Green mascot",
     width: 90,
     height: 73.8,
-    className: "absolute top-[-20%] left-[20%]",
+    className: "absolute top-[-25%] left-[20%]",
   },
   {
     srcLight: "/images/mascots/blue.svg",
@@ -107,7 +107,7 @@ const mobileMascots = [
     alt: "Blue mascot",
     width: 90,
     height: 73.8,
-    className: "absolute top-[-7%] left-[60%]",
+    className: "absolute top-[-12%] left-[60%]",
   },
   {
     srcLight: "/images/mascots/orange.svg",
@@ -115,7 +115,7 @@ const mobileMascots = [
     alt: "Orange mascot",
     width: 81,
     height: 67.5,
-    className: "absolute top-[0%] left-[82%]",
+    className: "absolute top-[-2%] left-[82%]",
   },
   {
     srcLight: "/images/mascots/beige.svg",
