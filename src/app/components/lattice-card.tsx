@@ -25,9 +25,9 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
       }}
     >
       {/* Overlay Section */}
-      <div className="absolute inset-0 bg-black bg-opacity-5 flex flex-col justify-between p-4">
+      <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col justify-between p-4">
         <div className="flex justify-between">
-          <p className="text-white font-light">{nodeCountry}</p>
+          <p className="text-white opacity-85 font-light font-dm-mono">{nodeCountry}</p>
           <Image
             src="/images/white-logo.svg"
             alt="White Asterism"
@@ -36,10 +36,10 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
           />
         </div>
         <div>
-          <p className="text-sm text-[#FFF] opacity-75 font-medium">
+          <p className="text-sm text-[#FFF] opacity-85 font-medium tracking-[0.3px]">
             {nodeCity}
           </p>
-          <p className="font-tiempos text-[#ffffff] text-2xl mt-[10px] tracking-[-0.64px] font-light">
+          <p className="font-tiempos text-[#ffffff] text-2xl mt-[8px] tracking-[-0.2px] font-thin">
             {nodeName}
           </p>
         </div>

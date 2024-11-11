@@ -222,7 +222,7 @@ export default function AboutPage() {
                         width={40}
                         height={40}
                     />
-                    <h1 className="text-[#706F6B] text-xl tracking-[-1px]">
+                    <h1 className="text-[#706F6B] text-sm sm:text-xl tracking-[-1px]">
                         &quot;You have something very special here that I have
                         not experienced.{" "}
                         <span className="text-[#000000]">
@@ -364,7 +364,7 @@ export default function AboutPage() {
                         width={40}
                         height={40}
                     />
-                    <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px]">
+                    <h1 className="text-[#706F6B] font-tiempos text-2xl sm:text-4xl leading-none tracking-[-1px]">
                         “twitter makes waterloo look{" "}
                         <span className="text-[#000000]">
                             <br className="hidden sm:inline"></br>
@@ -388,7 +388,7 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
+                <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1 text-xs sm:text-sm">
                     <Image
                         src={"/images/quotation.svg"}
                         alt="quotation symbol"
