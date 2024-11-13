@@ -16,7 +16,7 @@ const overlayStyle = {
   // right: "2.5%",
   // width: "450px",
   // height: "760px",
-  marginTop: "-320px",
+  marginTop: "-300px",
   overflowY: "auto" as const,
 };
 
