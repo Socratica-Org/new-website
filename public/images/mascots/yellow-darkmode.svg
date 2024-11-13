@@ -1,11 +1,8 @@
-<svg width="184" height="179" viewBox="0 0 184 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g style="mix-blend-mode:screen">
-<rect width="75.355" height="72.3453" transform="matrix(-0.381137 -0.749766 0.987456 -0.603664 64.4048 167.306)" fill="#E9B34A"/>
-</g>
-<g style="mix-blend-mode:screen">
-<rect width="75.355" height="72.3453" transform="matrix(-0.381137 -0.749766 0.987456 -0.603664 77.2798 112.214)" fill="#E9B34A"/>
-</g>
-<path d="M90.1592 40.6367L96.2728 42.0654" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
-<path d="M107.981 44.3652L113.269 45.6008" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
-<path d="M103.214 43.0509C102.596 43.949 102.002 44.6714 101.285 45.4485C101.166 45.5778 100.605 46.052 100.531 46.2827C100.449 46.5408 100.957 46.9274 101.068 47.0451C101.48 47.4805 102.195 48.1324 102.32 48.824" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+<svg width="190" height="249" viewBox="0 0 190 249" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="101.021" height="101.021" transform="matrix(-0.527595 -0.849496 0.849431 -0.5277 69.874 232.487)" fill="#E9B34A"/>
+<rect width="101.021" height="101.021" transform="matrix(-0.527595 -0.849496 0.849431 -0.5277 87.7559 155.97)" fill="#E9B34A"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M63.7704 117.351L87.7557 155.97L126.371 131.981L102.386 93.3611L63.7704 117.351Z" fill="#FFDD88"/>
+<path d="M92.2354 56.5576L100.726 58.5419" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+<path d="M116.988 61.7368L124.332 63.4529" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+<path d="M110.086 60.1612C109.261 61.2915 108.436 62.1848 107.418 63.133C107.249 63.2908 106.423 63.8494 106.352 64.1535C106.273 64.4938 107.203 65.1067 107.414 65.2862C108.195 65.9502 109.53 66.9606 109.893 67.9292" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
 </svg>

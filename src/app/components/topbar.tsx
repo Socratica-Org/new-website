@@ -50,7 +50,7 @@ export default function TopBar({
             href="/map"
             className={`font-dm-mono border ${borderColor} rounded-full px-4 py-2 ${backgroundColor} hover:bg-pink transition-colors duration-500 ease-in-out`}
           >
-            LATTICE
+            MAP
           </a>
         </div>
 
@@ -91,7 +91,7 @@ export default function TopBar({
           <a
             href="https://lu.ma/socratica"
             target="_blank"
-            className={`font-dm-mono ${isDarkMode ? "bg-primary text-black" : "bg-black text-white"} border ${borderColor} rounded-full px-4 py-2 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out flex items-center`}
+            className={`font-dm-mono ${isDarkMode ? "bg-primary text-black" : "bg-black text-white"} border ${borderColor} rounded-full px-4 py-2 hover:bg-grey hover:text-black transition-colors duration-300 ease-in-out flex items-center`}
             onMouseEnter={() => setIsJoinHovered(true)}
             onMouseLeave={() => setIsJoinHovered(false)}
           >

@@ -26,7 +26,7 @@ export default function Home() {
           Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         const visiblePercentage = (visibleHeight / viewportHeight) * 100;
 
-        setIsDarkMode(visiblePercentage >= 50);
+        setIsDarkMode(visiblePercentage >= 20);
       }
 
       const firstAsterism = firstAsterismRef.current;
@@ -162,7 +162,7 @@ export default function Home() {
             <a
               href="https://lu.ma/socratica"
               target="_blank"
-              className="bg-black text-white rounded-full flex items-center px-6 py-3 hover:bg-grey hover:text-black transition-colors duration-500 ease-in-out uppercase font-dm-mono"
+              className="bg-black text-white rounded-full flex items-center px-6 py-3 hover:bg-grey hover:text-black transition-colors duration-300 ease-in-out uppercase font-dm-mono"
               onMouseEnter={() => setIsJoinHovered(true)}
               onMouseLeave={() => setIsJoinHovered(false)}
             >
@@ -321,7 +321,7 @@ export default function Home() {
         </div>
 
         <div className="mt-10 md:mt-20 w-full md:w-3/5 text-center">
-          <p className="font-tiempos text-4xl">
+          <p className={`font-tiempos text-4xl ${isDarkMode ? "text-white" : ""}`}>
             We host co-working sessions for you to get started on that{" "}
             <i>thing</i> you&apos;ve been meaning to do.
           </p>
