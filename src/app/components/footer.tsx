@@ -12,7 +12,10 @@ export default function Footer() {
           </p>
           <p>
             FROM WATERLOO <br></br>
-            TO THE <a href="/map" className="hover:underline">WORLD</a>
+            TO THE{" "}
+            <a href="/map" className="hover:underline">
+              WORLD
+            </a>
           </p>
           <div>
             <a

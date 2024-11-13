@@ -321,10 +321,35 @@ export default function Home() {
         </div>
 
         <div className="mt-10 md:mt-20 w-full md:w-3/5 text-center">
-          <p className={`font-tiempos text-4xl ${isDarkMode ? "text-white" : ""}`}>
+          <p
+            className={`font-tiempos text-4xl ${isDarkMode ? "text-white" : ""}`}
+          >
             We host co-working sessions for you to get started on that{" "}
             <i>thing</i> you&apos;ve been meaning to do.
           </p>
+
+          <div className="flex justify-center mt-10">
+            <a
+              href="https://lu.ma/socratica"
+              target="_blank"
+              className="bg-black text-white rounded-full flex items-center px-6 py-3 hover:bg-grey hover:text-black transition-colors duration-300 ease-in-out uppercase font-dm-mono"
+              onMouseEnter={() => setIsJoinHovered(true)}
+              onMouseLeave={() => setIsJoinHovered(false)}
+            >
+              <Image
+                src={
+                  isJoinHovered
+                    ? "images/black-right-arrow.svg"
+                    : "images/right-arrow.svg"
+                }
+                alt="Right Arrow"
+                width={12}
+                height={12}
+                className="mr-2"
+              />
+              Join Us
+            </a>
+          </div>
         </div>
 
         {/* <div className="flex flex-row">
@@ -382,7 +407,9 @@ export default function Home() {
             <span>
               <br className="hidden sm:inline"></br>
             </span>
-            <a href="/map" target="_blank" className="h:underline">Socratica Lattice.</a>
+            <a href="/map" target="_blank" className="h:underline">
+              Socratica Lattice.
+            </a>
           </p>
           <a
             href="/map"
