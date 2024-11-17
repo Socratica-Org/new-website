@@ -5,10 +5,10 @@ export const locations: {
   location: string;
   lumaLink: string;
   joinLink: string;
-  instagramLink: string;
-  twitterLink: string;
-  youtubeLink: string;
-  websiteLink: string;
+  instagramLink?: string;
+  twitterLink?: string;
+  youtubeLink?: string;
+  websiteLink?: string;
   imageSrc?: string; // Add this line
   coordinates: [number, number];
 }[] = [
@@ -27,15 +27,11 @@ export const locations: {
   },
   {
     id: "toronto",
-    name: "Socratica",
+    name: "Meraki",
     date: "JANUARY 2023",
     location: "Toronto, ON",
     lumaLink: "https://lu.ma/embed/calendar/cal-PxG5QruZfgz28XB/events",
     joinLink: "https://lu.ma/socraticaTO",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [43.664714, -79.385477],
   },
   {
@@ -47,7 +43,6 @@ export const locations: {
     joinLink: "https://lu.ma/atelier.place",
     instagramLink: "https://www.instagram.com/atelier.place/",
     twitterLink: "https://x.com/atelier_place",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
     websiteLink: "http://www.atelier.place/",
     coordinates: [49.2600924, -123.2509564],
   },
@@ -58,10 +53,6 @@ export const locations: {
     location: "Cambridge, UK",
     lumaLink: "https://lu.ma/embed/calendar/cal-vHCyjMqqjpdduOt/events",
     joinLink: "https://lu.ma/scaledown",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [52.205338, 0.121817],
   },
   //   {
@@ -86,9 +77,6 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-AxzTU0DF1vlwRSI/events",
     joinLink: "https://lu.ma/id8id8id8",
     instagramLink: "https://www.instagram.com/id8id8id8",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [44.231172, -76.485954],
   },
   {
@@ -99,9 +87,6 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-CRtUehgIQHLEB3o/events",
     joinLink: "https://lu.ma/commonroom",
     instagramLink: "https://www.instagram.com/berkeleycommonroom",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [37.871593, -122.272747],
   },
   {
@@ -112,9 +97,6 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-gt0OmSf2cUw1HHl/events",
     joinLink: "https://lu.ma/moment.um",
     instagramLink: "https://www.instagram.com/momentum_uwo",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [43.009561, -81.275471],
   },
   {
@@ -124,10 +106,6 @@ export const locations: {
     location: "Cambridge, MA",
     lumaLink: "https://lu.ma/embed/calendar/cal-yDZTDnxoCpg2xwE/events",
     joinLink: "https://lu.ma/beans",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [42.3629, -71.0839],
   },
   // {
@@ -151,10 +129,6 @@ export const locations: {
     location: "Stanford, CA",
     lumaLink: "https://lu.ma/embed/calendar/cal-bBCpTcywZinszKP/events",
     joinLink: "https://lu.ma/untitled",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [37.4277, -122.1701],
   },
   {
@@ -165,8 +139,6 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-81AnmgiInWOKNmv/events",
     joinLink: "https://lu.ma/calendar/cal-81AnmgiInWOKNmv",
     instagramLink: "https://www.instagram.com/sundaysatusc",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
     websiteLink: "https://www.sundays.rsvp/",
     coordinates: [34.0224, -118.2851],
   },
@@ -177,10 +149,6 @@ export const locations: {
     location: "Montreal, QC",
     lumaLink: "https://lu.ma/embed/calendar/cal-PIrfoWlJDawpNDO/events",
     joinLink: "https://lu.ma/douzeadeuxMontreal",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [45.5017, -73.5673],
   },
   {
@@ -190,9 +158,6 @@ export const locations: {
     location: "Seattle, WA",
     lumaLink: "https://lu.ma/embed/calendar/cal-SD9FoHuZW6pQn6D/events",
     joinLink: "https://lu.ma/uwsaturdays",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
     websiteLink: "https://saturdays.rsvp/",
     coordinates: [47.6062, -122.3321],
   },
@@ -203,10 +168,6 @@ export const locations: {
     location: "Chapel Hill, NC",
     lumaLink: "https://lu.ma/embed/calendar/cal-p0CcDhZn6Z5elyX/events",
     joinLink: "https://lu.ma/unc-hatch",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [35.9049, -79.0469],
   },
   {
@@ -216,10 +177,6 @@ export const locations: {
     location: "London, UK",
     lumaLink: "https://lu.ma/embed/calendar/cal-qFfyVkBdmPJ7yBv/events",
     joinLink: "https://lu.ma/craft_",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [51.4988, -0.1749],
   },
   // {
@@ -242,10 +199,6 @@ export const locations: {
     location: "Philadelphia, PA",
     lumaLink: "https://lu.ma/embed/calendar/cal-ftxaA6PDR5Tbllt/events",
     joinLink: "https://lu.ma/code-and-coffee",
-    instagramLink: "https://www.instagram.com/socratica.info",
-    twitterLink: "https://twitter.com/socraticainfo",
-    youtubeLink: "https://www.youtube.com/@socraticainfo",
-    websiteLink: "https://www.socratica.info/",
     coordinates: [39.9500592, -75.1707463],
   },
   // {

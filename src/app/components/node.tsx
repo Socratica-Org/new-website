@@ -81,7 +81,9 @@ export default function Node({
               alt: "Youtube",
               borderColor: "border-[#d94221]",
             },
-          ].map(({ link, icon, alt, borderColor }) => (
+          ]
+          .filter(({ link }) => link)
+          .map(({ link, icon, alt, borderColor }) => (
             <a
               key={alt}
               href={link}
