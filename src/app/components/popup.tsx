@@ -43,10 +43,10 @@ export default function Popup({
         lumaLink={location.lumaLink}
         imageSrc={location.imageSrc}
         joinLink={location.joinLink}
-        websiteLink={location.websiteLink}
-        instagramLink={location.instagramLink}
-        twitterLink={location.twitterLink}
-        youtubeLink={location.youtubeLink}
+        websiteLink={location.websiteLink || ""}
+        instagramLink={location.instagramLink || ""}
+        twitterLink={location.twitterLink || ""}
+        youtubeLink={location.youtubeLink || ""}
       />
     </div>
   );
