@@ -5,10 +5,10 @@ export interface Location {
   location: string;
   lumaLink: string;
   joinLink: string;
-  instagramLink: string;
-  twitterLink: string;
-  youtubeLink: string;
-  websiteLink: string;
+  instagramLink?: string;
+  twitterLink?: string;
+  youtubeLink?: string;
+  websiteLink?: string;
   imageSrc?: string;
   coordinates: [number, number];
 }
