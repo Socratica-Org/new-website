@@ -2,10 +2,11 @@ import React from "react";
 import Image from "next/image";
 
 interface LatticeCardProps {
-  imageURL: string;
+  imageURL?: string;
   nodeName: string;
   nodeCity: string;
   nodeCountry: string;
+  nodeId: string;
 }
 
 const LatticeCard: React.FC<LatticeCardProps> = ({
@@ -13,7 +14,9 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
   nodeName,
   nodeCity,
   nodeCountry,
+  nodeId,
 }) => {
+
   return (
     <div
       className="relative h-[320px] w-[230px] rounded-lg overflow-hidden cursor-pointer"
@@ -24,29 +27,34 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
         backgroundBlendMode: "overlay",
       }}
     >
-      {/* Overlay Section */}
-      <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col justify-between p-4">
-        <div className="flex justify-between">
-          <p className="text-white opacity-85 font-light font-dm-mono">
-            {nodeCountry}
-          </p>
-          <Image
-            src="/images/white-logo.svg"
-            alt="White Asterism"
-            width={27}
-            height={26}
-          />
+      <a 
+        href={`/map?location=${nodeId}`}
+        target="_blank"
+      >
+        {/* Overlay Section */}
+        <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col justify-between p-4">
+          <div className="flex justify-between">
+            <p className="text-white opacity-85 font-light font-dm-mono">
+              {nodeCountry}
+            </p>
+            <Image
+              src="/images/white-logo.svg"
+              alt="White Asterism"
+              width={27}
+              height={26}
+            />
+          </div>
+          <div>
+            <p className="text-sm text-[#FFF] opacity-85 font-medium tracking-[0.3px]">
+              {nodeCity}
+            </p>
+            <p className="font-tiempos text-[#ffffff] text-2xl mt-[8px] tracking-[-0.2px] font-thin">
+              {nodeName}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="text-sm text-[#FFF] opacity-85 font-medium tracking-[0.3px]">
-            {nodeCity}
-          </p>
-          <p className="font-tiempos text-[#ffffff] text-2xl mt-[8px] tracking-[-0.2px] font-thin">
-            {nodeName}
-          </p>
-        </div>
+        </a>
       </div>
-    </div>
   );
 };
 

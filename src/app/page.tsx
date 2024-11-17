@@ -7,6 +7,7 @@ import MobileNavbar from "./components/mobile-navbar";
 import DoodleSwitcher from "./components/doodle-switcher";
 import LatticeCard from "./components/lattice-card";
 import Mascots from "./components/mascots";
+import { locations } from "./map/locations";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -51,51 +52,6 @@ export default function Home() {
     // handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const latticeNodes = [
-    {
-      nodeName: "Socratica",
-      nodeCity: "Waterloo",
-      nodeCountry: "CAN",
-      imageURL: "/lattice/waterloo.jpg",
-    },
-    {
-      nodeName: "Atelier",
-      nodeCity: "Vancouver",
-      nodeCountry: "CAN",
-      imageURL: "/lattice/vancouver.jpg",
-    },
-    {
-      nodeName: "Friendly Beans",
-      nodeCity: "Boston",
-      nodeCountry: "USA",
-      imageURL: "/lattice/boston.jpg",
-    },
-    {
-      nodeName: "Sundays",
-      nodeCity: "Los Angeles",
-      nodeCountry: "USA",
-      imageURL: "/lattice/la.jpg",
-    },
-    {
-      nodeName: "Douze a Deux",
-      nodeCity: "Montreal",
-      nodeCountry: "CAN",
-      imageURL: "/lattice/montreal.jpg",
-    },
-    {
-      nodeName: "Imperial",
-      nodeCity: "London",
-      nodeCountry: "UK",
-      imageURL: "/lattice/imperial.jpg",
-    },
-    {
-      nodeName: "Orchard",
-      nodeCity: "Oxford",
-      nodeCountry: "UK",
-      imageURL: "/lattice/oxford.jpg",
-    },
-  ];
 
   return (
     <div
@@ -431,17 +387,20 @@ export default function Home() {
           <div className="flex overflow-x-auto space-x-9 py-4 hide-scroll-bar">
             {/* Map through your card data */}
             <div className="min-w-[250px] h-[100%]"></div>
-            {latticeNodes.map((node, index) => (
-              // blank div for space at start of card list
-              <div key={index} className="flex-shrink-0 min-w-[200px]">
-                <LatticeCard
-                  imageURL={node.imageURL}
-                  nodeName={node.nodeName}
-                  nodeCity={node.nodeCity}
-                  nodeCountry={node.nodeCountry}
-                />
-              </div>
-            ))}
+            {locations
+              .filter((node) => node.imageSrc)
+              .map((node, index) => (
+                // blank div for space at start of card list
+                <div key={index} className="flex-shrink-0 min-w-[200px]">
+                  <LatticeCard
+                    imageURL={node.imageSrc}
+                    nodeName={node.name}
+                    nodeCity={node.nodeCity}
+                    nodeCountry={node.nodeCountry}
+                    nodeId={node.id}
+                  />
+                </div>
+              ))}
           </div>
         </div>
       </div>

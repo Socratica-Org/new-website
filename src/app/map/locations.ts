@@ -9,8 +9,10 @@ export const locations: {
   twitterLink?: string;
   youtubeLink?: string;
   websiteLink?: string;
-  imageSrc?: string; // Add this line
   coordinates: [number, number];
+  nodeCity: string,
+  nodeCountry: string,
+  imageSrc?: string
 }[] = [
   {
     id: "waterloo",
@@ -24,6 +26,9 @@ export const locations: {
     youtubeLink: "https://www.youtube.com/@socraticainfo",
     websiteLink: "https://www.socratica.info/",
     coordinates: [43.477305, -80.549252],
+    nodeCity: "Waterloo",
+    nodeCountry: "CAN",
+    imageSrc: "/lattice/waterloo.jpg",
   },
   {
     id: "toronto",
@@ -33,6 +38,8 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-PxG5QruZfgz28XB/events",
     joinLink: "https://lu.ma/socraticaTO",
     coordinates: [43.664714, -79.385477],
+    nodeCity: "Toronto",
+    nodeCountry: "CAN",
   },
   {
     id: "vancouver",
@@ -45,6 +52,9 @@ export const locations: {
     twitterLink: "https://x.com/atelier_place",
     websiteLink: "http://www.atelier.place/",
     coordinates: [49.2600924, -123.2509564],
+    nodeCity: "Vancouver",
+    nodeCountry: "CAN",
+    imageSrc: "/lattice/vancouver.jpg",
   },
   {
     id: "cambridge-uk",
@@ -54,6 +64,8 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-vHCyjMqqjpdduOt/events",
     joinLink: "https://lu.ma/scaledown",
     coordinates: [52.205338, 0.121817],
+    nodeCity: "Cambridge",
+    nodeCountry: "UK",
   },
   //   {
   //     id: "ottawa",
@@ -78,6 +90,8 @@ export const locations: {
     joinLink: "https://lu.ma/id8id8id8",
     instagramLink: "https://www.instagram.com/id8id8id8",
     coordinates: [44.231172, -76.485954],
+    nodeCity: "Kingston",
+    nodeCountry: "CAN",
   },
   {
     id: "berkeley",
@@ -88,6 +102,8 @@ export const locations: {
     joinLink: "https://lu.ma/commonroom",
     instagramLink: "https://www.instagram.com/berkeleycommonroom",
     coordinates: [37.871593, -122.272747],
+    nodeCity: "Berkeley",
+    nodeCountry: "USA",
   },
   {
     id: "western",
@@ -98,6 +114,8 @@ export const locations: {
     joinLink: "https://lu.ma/moment.um",
     instagramLink: "https://www.instagram.com/momentum_uwo",
     coordinates: [43.009561, -81.275471],
+    nodeCity: "London",
+    nodeCountry: "CAN",
   },
   {
     id: "mit",
@@ -107,6 +125,9 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-yDZTDnxoCpg2xwE/events",
     joinLink: "https://lu.ma/beans",
     coordinates: [42.3629, -71.0839],
+    nodeCity: "Boston",
+    nodeCountry: "USA",
+    imageSrc: "/lattice/boston.jpg",
   },
   // {
   //     id: "san-francisco",
@@ -130,6 +151,9 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-bBCpTcywZinszKP/events",
     joinLink: "https://lu.ma/untitled",
     coordinates: [37.4277, -122.1701],
+    nodeCity: "Stanford",
+    nodeCountry: "USA",
+    
   },
   {
     id: "usc",
@@ -141,6 +165,9 @@ export const locations: {
     instagramLink: "https://www.instagram.com/sundaysatusc",
     websiteLink: "https://www.sundays.rsvp/",
     coordinates: [34.0224, -118.2851],
+    nodeCity: "Los Angeles",
+    nodeCountry: "USA",
+    imageSrc: "/lattice/la.jpg"
   },
   {
     id: "montreal",
@@ -150,6 +177,9 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-PIrfoWlJDawpNDO/events",
     joinLink: "https://lu.ma/douzeadeuxMontreal",
     coordinates: [45.5017, -73.5673],
+    nodeCity: "Montreal",
+    nodeCountry: "CAN",
+    imageSrc: "/lattice/montreal.jpg"
   },
   {
     id: "washington",
@@ -160,6 +190,8 @@ export const locations: {
     joinLink: "https://lu.ma/uwsaturdays",
     websiteLink: "https://saturdays.rsvp/",
     coordinates: [47.6062, -122.3321],
+    nodeCity: "Seattle",
+    nodeCountry: "USA",
   },
   {
     id: "unc",
@@ -169,6 +201,8 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-p0CcDhZn6Z5elyX/events",
     joinLink: "https://lu.ma/unc-hatch",
     coordinates: [35.9049, -79.0469],
+    nodeCity: "Chapel Hill",
+    nodeCountry: "USA",
   },
   {
     id: "imperial",
@@ -178,6 +212,22 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-qFfyVkBdmPJ7yBv/events",
     joinLink: "https://lu.ma/craft_",
     coordinates: [51.4988, -0.1749],
+    nodeCity: "London",
+    nodeCountry: "UK",
+    imageSrc: "/lattice/imperial.jpg",
+  },
+  {
+    id: "oxford",
+    name: "Orchard",
+    date: "SEPTEMBER 2024",
+    location: "London, UK",
+    lumaLink: "https://lu.ma/embed/calendar/cal-TGGXNEITTevMhOG/events",
+    joinLink: "https://lu.ma/orchard",
+    instagramLink: "https://www.instagram.com/orchard.oxford/",
+    coordinates: [51.7520, -1.2577],
+    nodeCity: "Oxford",
+    nodeCountry: "UK",
+    imageSrc: "/lattice/oxford.jpg",
   },
   // {
   //   id: "tokyo",
@@ -200,6 +250,8 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-ftxaA6PDR5Tbllt/events",
     joinLink: "https://lu.ma/code-and-coffee",
     coordinates: [39.9500592, -75.1707463],
+    nodeCity: "Philadelphia",
+    nodeCountry: "USA",
   },
   // {
   //   id: "ny",
