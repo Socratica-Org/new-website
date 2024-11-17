@@ -82,18 +82,18 @@ export default function Node({
               borderColor: "border-[#d94221]",
             },
           ]
-          .filter(({ link }) => link)
-          .map(({ link, icon, alt, borderColor }) => (
-            <a
-              key={alt}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-flex justify-center items-center w-[38px] h-[38px] p-[5px] border-2 ${borderColor} rounded-full overflow-hidden`}
-            >
-              <Image src={icon} alt={alt} className="w-4/5 h-auto" />
-            </a>
-          ))}
+            .filter(({ link }) => link)
+            .map(({ link, icon, alt, borderColor }) => (
+              <a
+                key={alt}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex justify-center items-center w-[38px] h-[38px] p-[5px] border-2 ${borderColor} rounded-full overflow-hidden`}
+              >
+                <Image src={icon} alt={alt} className="w-4/5 h-auto" />
+              </a>
+            ))}
         </div>
       </div>
 

@@ -16,7 +16,6 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
   nodeCountry,
   nodeId,
 }) => {
-
   return (
     <div
       className="relative h-[320px] w-[230px] rounded-lg overflow-hidden cursor-pointer"
@@ -27,10 +26,7 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
         backgroundBlendMode: "overlay",
       }}
     >
-      <a 
-        href={`/map?location=${nodeId}`}
-        target="_blank"
-      >
+      <a href={`/map?location=${nodeId}`} target="_blank">
         {/* Overlay Section */}
         <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col justify-between p-4">
           <div className="flex justify-between">
@@ -53,8 +49,8 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
             </p>
           </div>
         </div>
-        </a>
-      </div>
+      </a>
+    </div>
   );
 };
 

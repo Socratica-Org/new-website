@@ -10,9 +10,9 @@ export const locations: {
   youtubeLink?: string;
   websiteLink?: string;
   coordinates: [number, number];
-  nodeCity: string,
-  nodeCountry: string,
-  imageSrc?: string
+  nodeCity: string;
+  nodeCountry: string;
+  imageSrc?: string;
 }[] = [
   {
     id: "waterloo",
@@ -153,7 +153,6 @@ export const locations: {
     coordinates: [37.4277, -122.1701],
     nodeCity: "Stanford",
     nodeCountry: "USA",
-    
   },
   {
     id: "usc",
@@ -167,7 +166,7 @@ export const locations: {
     coordinates: [34.0224, -118.2851],
     nodeCity: "Los Angeles",
     nodeCountry: "USA",
-    imageSrc: "/lattice/la.jpg"
+    imageSrc: "/lattice/la.jpg",
   },
   {
     id: "montreal",
@@ -179,7 +178,7 @@ export const locations: {
     coordinates: [45.5017, -73.5673],
     nodeCity: "Montreal",
     nodeCountry: "CAN",
-    imageSrc: "/lattice/montreal.jpg"
+    imageSrc: "/lattice/montreal.jpg",
   },
   {
     id: "washington",
@@ -224,7 +223,7 @@ export const locations: {
     lumaLink: "https://lu.ma/embed/calendar/cal-TGGXNEITTevMhOG/events",
     joinLink: "https://lu.ma/orchard",
     instagramLink: "https://www.instagram.com/orchard.oxford/",
-    coordinates: [51.7520, -1.2577],
+    coordinates: [51.752, -1.2577],
     nodeCity: "Oxford",
     nodeCountry: "UK",
     imageSrc: "/lattice/oxford.jpg",
