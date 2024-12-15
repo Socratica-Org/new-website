@@ -262,9 +262,8 @@ export const locations: {
     name: "Cozy Sundays",
     date: "APRIL 2024",
     location: "New York, NY",
-    lumaLink: "https://lu.ma/cozy-sundays",
-    joinLink:
-      "https://www.notion.so/straightupjac/Socratica-NYC-public-5e1198e16be24eacae4d97f764717f21",
+    lumaLink: "https://lu.ma/embed/calendar/cal-G6Cy8QvgQqUskKZ/events",
+    joinLink: "https://lu.ma/cozy-sundays",
     websiteLink:
       "https://www.notion.so/straightupjac/Socratica-NYC-public-5e1198e16be24eacae4d97f764717f21",
     coordinates: [40.7128, -74.006],
