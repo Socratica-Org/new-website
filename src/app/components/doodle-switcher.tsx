@@ -14,7 +14,7 @@ const doodles = [
     title: '"Project Block"',
   },
   {
-    src: "/images/doodles/doodle4.png",
+    src: "/images/doodles/socratica_logo.svg",
     title: '"MS Paint", by HudZah',
   },
   {

@@ -19,9 +19,10 @@ export default function AboutPage() {
       <div className="grid grid-cols-4 min-w-full mt-[70px] mb-[100px]">
         <div className="col-span-4 sm:col-span-3 md:col-span-2 ml-[20px]">
           <div className="flex flex-row mb-[30px]">
-          <h1 className="text-[#131313] font-tiempos text-[36px] sm:text-[48px] md:text-[52px] leading-[0.95] font-light tracking-[-1.04px]">
-            The <br />Wall of Love
-          </h1>
+            <h1 className="text-[#131313] font-tiempos text-[36px] sm:text-[48px] md:text-[52px] leading-[0.95] font-light tracking-[-1.04px]">
+              The <br />
+              Wall of Love
+            </h1>
 
             <Image
               className="self-end ml-3 mb-2 w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12"
@@ -110,7 +111,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-
         <div className="bg-[#649AEA] h-[300px] p-[30px] relative flex flex-col justify-between col-span-4 sm:col-span-4 md:col-span-3 overflow-hidden">
           {/* Quotation Symbol */}
           <Image
@@ -122,7 +122,7 @@ export default function AboutPage() {
 
           {/* Content */}
           <div className="flex flex-row items-center relative">
-          <h1 className="text-[#FFFCF3] font-tiempos text-[40px] sm:text-[40px] leading-[0.95] font-light tracking-[-0.25px]">
+            <h1 className="text-[#FFFCF3] font-tiempos text-[40px] sm:text-[40px] leading-[0.95] font-light tracking-[-0.25px]">
               “the greatest student event <br /> I’ve ever seen”
             </h1>
 
@@ -139,7 +139,9 @@ export default function AboutPage() {
 
           {/* Footer */}
           <div className="flex flex-row justify-between">
-            <p className="text-[#D1DEEE] font-[500] tracking-[-1px]">Cory Levy</p>
+            <p className="text-[#D1DEEE] font-[500] tracking-[-1px]">
+              Cory Levy
+            </p>
             <div className="flex gap-2">
               <Image
                 src={"/images/block.svg"}
@@ -148,11 +150,12 @@ export default function AboutPage() {
                 height={14}
                 style={{ filter: "brightness(0) invert(1)" }}
               />
-              <p className="text-[#D1DEEE] font-[500] tracking-[-1px]">San Francisco</p>
+              <p className="text-[#D1DEEE] font-[500] tracking-[-1px]">
+                San Francisco
+              </p>
             </div>
           </div>
         </div>
-
 
         <div className="bg-[#FBEFEF] h-[300px] p-[30px] border-[#CFCCC4] border-[1px] border-solid flex flex-col justify-between col-span-4 sm:col-span-2 md:col-span-1">
           <Image
@@ -317,7 +320,8 @@ export default function AboutPage() {
 
           {/* Quote */}
           <h1 className="text-[#FFFCF3] text-sm md:text-md z-[10] relative w-[90%] md:w-[85%] mt-16">
-            my <span className="font-bold">dream travel destination</span> for 2024 is waterloo, ontario
+            my <span className="font-bold">dream travel destination</span> for
+            2024 is waterloo, ontario
           </h1>
 
           {/* Footer */}
@@ -331,7 +335,9 @@ export default function AboutPage() {
                 height={14}
                 style={{ filter: "brightness(0) invert(1)" }}
               />
-              <p className="text-[#FFFCF3] font-[500] tracking-[-1px]">Twitter</p>
+              <p className="text-[#FFFCF3] font-[500] tracking-[-1px]">
+                Twitter
+              </p>
             </div>
           </div>
         </div>
@@ -347,7 +353,8 @@ export default function AboutPage() {
 
           {/* Highlighted Quote */}
           <h1 className="text-[#706F6B] font-tiempos text-4xl leading-none tracking-[-1px] z-[10] relative">
-            “socratica was <span className="text-[#000000]">the highlight</span> of my time <span className="text-[#000000]">at waterloo</span>”
+            “socratica was <span className="text-[#000000]">the highlight</span>{" "}
+            of my time <span className="text-[#000000]">at waterloo</span>”
           </h1>
 
           {/* Footer */}
@@ -360,7 +367,9 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#9E9797] font-[500] tracking-[-1px]">New York</p>
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
+                New York
+              </p>
             </div>
           </div>
         </div>
@@ -434,7 +443,9 @@ export default function AboutPage() {
           {/* Content */}
           <div className="flex flex-row items-center relative">
             <h1 className="text-[#131313] font-tiempos text-2xl sm:text-3xl md:text-4xl leading-none tracking-[-1px] z-[10]">
-              &quot;realizing that I couldn&apos;t attend<br /> the socratica symposium<br />
+              &quot;realizing that I couldn&apos;t attend
+              <br /> the socratica symposium
+              <br />
               <span className="text-[#706F6B]">ruined my day</span>
               &quot;
             </h1>
@@ -451,7 +462,9 @@ export default function AboutPage() {
 
           {/* Footer */}
           <div className="flex flex-row justify-between z-[10] relative">
-            <p className="text-[#131313] font-[500] tracking-[-1px]">@chaoticdesigned</p>
+            <p className="text-[#131313] font-[500] tracking-[-1px]">
+              @chaoticdesigned
+            </p>
             <div className="flex gap-2">
               <Image
                 src={"/images/block.svg"}
@@ -459,7 +472,9 @@ export default function AboutPage() {
                 width={14}
                 height={14}
               />
-              <p className="text-[#9E9797] font-[500] tracking-[-1px]">Twitter</p>
+              <p className="text-[#9E9797] font-[500] tracking-[-1px]">
+                Twitter
+              </p>
             </div>
           </div>
         </div>
