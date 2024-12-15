@@ -80,7 +80,7 @@ const MapPageContent = () => {
         el.style.height = "41px";
         el.style.backgroundSize = "100%";
 
-        const marker = new mapboxgl.Marker(el)
+        const marker = new mapboxgl.Marker(el, { anchor: "bottom" })
           .setLngLat([location.coordinates[1], location.coordinates[0]])
           .addTo(map.current!);
 
