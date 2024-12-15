@@ -8,6 +8,8 @@ import { transform } from "next/dist/build/swc";
 
 export default function AboutPage() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isJoinHovered, setIsJoinHovered] = useState(false);
+
   return (
     <div
       className={`${isDarkMode ? "bg-off-black" : "bg-primary"} min-h-screen min-w-full flex flex-col px-10`}
@@ -34,12 +36,16 @@ export default function AboutPage() {
           </div>
 
           <a
-            className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#041010] border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px]  text-white cursor-pointer whitespace-nowrap mb-[20px] md:mb-[0px]`}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSel0ZjxRpWJDDIe-CoJjbCDcqONsMWPClIrH7csZNOIhqETHA/viewform"
+            target="_blank"
+            className={`font-dm-mono flex flex-row w-fit self-center gap-[8px] uppercase bg-[#041010] border-[1px] border-[#CFCCC4] border-solid px-[25px] py-[10px] rounded-[95px] hover:bg-grey hover:text-black transition-colors duration-300 ease-in-out text-white cursor-pointer whitespace-nowrap mb-[20px] md:mb-[0px]`}
+            onMouseEnter={() => setIsJoinHovered(true)}
+            onMouseLeave={() => setIsJoinHovered(false)}
           >
             <Image
               src={
-                isDarkMode
-                  ? "/images/right-arrow.svg"
+                isJoinHovered
+                  ? "/images/black-right-arrow.svg"
                   : "/images/right-arrow.svg"
               }
               alt="right-arrow"
@@ -503,7 +509,7 @@ export default function AboutPage() {
           </div>
           <div className="flex flex-row justify-between">
             <p className="text-[#DBDBC0] font-[500] tracking-[-1px]">
-              Anonymous
+              Soham Basu
             </p>
             <div className="flex gap-2">
               <Image
@@ -559,7 +565,8 @@ export default function AboutPage() {
               WHAT?
             </a>
             <p className="mt-[15px] text-[#41403F] font-[300]">
-              United by the mutual love for learning, making, and creating.
+              We're united by our mutual love for learning, making, and
+              creating.
             </p>
           </div>
           <div className="col-span-2 sm:col-span-1">
@@ -576,7 +583,7 @@ export default function AboutPage() {
             </a>
             <p className="mt-[15px] text-[#41403F] font-[300]">
               Socratica is a place for you to get these things done, surrounded
-              by others doing their own thing, too.
+              by others doing their own thing too.
             </p>
           </div>
           <div className="col-span-2 sm:col-span-1">
@@ -594,7 +601,7 @@ export default function AboutPage() {
             <p className="mt-[15px] text-[#41403F] font-[300]">
               That passion project you’ve been meaning to work on. That app
               you’ve been meaning to program. The painting you’ve been meaning
-              to finish.
+              to finish. Every Sunday.
             </p>
           </div>
         </div>

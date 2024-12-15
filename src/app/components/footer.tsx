@@ -53,13 +53,13 @@ export default function Footer() {
             >
               <p>FEEDBACK JAR</p>
             </a>
-            <a
+            {/* <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSel0ZjxRpWJDDIe-CoJjbCDcqONsMWPClIrH7csZNOIhqETHA/viewform"
               target="_blank"
               className="hover:underline"
             >
               <p>PRIVACY POLICY</p>
-            </a>
+            </a> */}
             <a
               href="https://socratica.notion.site/Code-of-Conduct-52fb005f7e3a452096e235995a2f92e5"
               target="_blank"

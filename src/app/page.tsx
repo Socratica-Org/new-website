@@ -105,8 +105,8 @@ export default function Home() {
             <div className="w-[12%]" />
             <div className="w-1/4">
               <p className="text-lg font-inter-variable tracking-tight">
-                We are multidisciplinary in our crafts, and a safe space for our
-                shared love of making things*.
+                We are multidisciplinary in our crafts, & united by our shared
+                love of making things*.
               </p>
               <p className="mt-8 text-lg text-soft-grey">
                 <i>*whatever your thing may be.</i>
@@ -209,7 +209,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="mt-12 px-4 text-2xl pr-8">
+            <div className="mt-8 px-4 text-2xl pr-8">
               <p className="font-inter-variable tracking-tight leading-none">
                 Great creative work is historically done together, across
                 backgrounds and disciplines, in small, high trust groups.

@@ -41,10 +41,22 @@ const LatticeCard: React.FC<LatticeCardProps> = ({
             />
           </div>
           <div>
-            <p className="text-sm text-[#FFF] opacity-85 font-medium tracking-[0.3px]">
+            <p
+              className="text-sm text-[#FFF] opacity-85 font-medium tracking-[0.3px]"
+              style={{
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                WebkitTextStroke: "0.5px white",
+              }}
+            >
               {nodeCity}
             </p>
-            <p className="font-tiempos text-[#ffffff] text-2xl mt-[8px] tracking-[-0.2px] font-thin">
+            <p
+              className="font-tiempos text-[#ffffff] text-2xl mt-[8px] tracking-[-0.2px] font-thin"
+              style={{
+                textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+                WebkitTextStroke: "1px white",
+              }}
+            >
               {nodeName}
             </p>
           </div>
