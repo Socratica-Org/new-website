@@ -565,7 +565,7 @@ export default function AboutPage() {
               WHAT?
             </a>
             <p className="mt-[15px] text-[#41403F] font-[300]">
-              We're united by our mutual love for learning, making, and
+              We&apos;re united by our mutual love for learning, making, and
               creating.
             </p>
           </div>

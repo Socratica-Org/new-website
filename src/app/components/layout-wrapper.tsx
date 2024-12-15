@@ -13,10 +13,6 @@ export default function LayoutWrapper({
   const pathname = usePathname();
   const isMapPage = pathname === "/map";
 
-  if (isMapPage) {
-    return <>{children}</>;
-  }
-
   useEffect(() => {
     if (analytics) {
       logEvent(analytics, "page_view", { page: "home" });
@@ -26,7 +22,7 @@ export default function LayoutWrapper({
   return (
     <>
       {children}
-      <Footer />
+      {!isMapPage && <Footer />}
     </>
   );
 }
